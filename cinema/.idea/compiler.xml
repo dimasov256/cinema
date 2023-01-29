@@ -17,11 +17,16 @@
           <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.4.2.Final/mapstruct-1.4.2.Final.jar" />
         </processorPath>
         <module name="notification" />
+        <module name="base-domains" />
         <module name="apigw" />
         <module name="clients" />
         <module name="fraud" />
         <module name="amqp" />
+        <module name="payment" />
+        <module name="stock" />
         <module name="eureka-server" />
+        <module name="email" />
+        <module name="orderservice" />
         <module name="customer" />
       </profile>
     </annotationProcessing>
@@ -29,20 +34,28 @@
       <module name="cinema-service" target="17" />
       <module name="foo" target="17" />
       <module name="order" target="17" />
+      <module name="some" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="amqp" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="apigw" options="-Amapstruct.defaultComponentModel=spring" />
+      <module name="base-domains" options="-Amapstruct.defaultComponentModel=spring" />
+      <module name="cinema" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="cinema-service" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="clients" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="customer" options="-Amapstruct.defaultComponentModel=spring" />
+      <module name="email" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="eureka-server" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="foo" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="fraud" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="notification" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="order" options="-Amapstruct.defaultComponentModel=spring" />
+      <module name="orderservice" options="-Amapstruct.defaultComponentModel=spring" />
+      <module name="payment" options="-Amapstruct.defaultComponentModel=spring" />
+      <module name="some" options="-Amapstruct.defaultComponentModel=spring" />
+      <module name="stock" options="-Amapstruct.defaultComponentModel=spring" />
     </option>
   </component>
 </project>

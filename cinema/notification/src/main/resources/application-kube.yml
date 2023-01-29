@@ -26,10 +26,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka-server:8761/eureka
-      fetch-registry: true
-      register-with-eureka: true
-      enabled: false
-
+    fetch-registry: true
+    register-with-eureka: true
+    enabled: false
 
 
 rabbitmq:

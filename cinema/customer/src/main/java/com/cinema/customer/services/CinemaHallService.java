@@ -42,11 +42,11 @@ public class CinemaHallService {
         cinemaHallDtoToSave.setCapacities(cinemaHallDto.getCapacities());
         cinemaHallDtoToSave.setLocation(cinemaHallDto.getLocation());
         cinemaHallDtoToSave.setName(cinemaHallDto.getName());
+        cinemaHallDtoToSave.setBooked(cinemaHallDto.isBooked());
 
         return cinemaHallMapper
                 .cinemaHallToCinemaHallDto(
-                        cinemaHallRepository.save(
-                                cinemaHallMapper.cinemaHallDtoToCinemaHall(cinemaHallDtoToSave)));
+                        cinemaHallRepository.save(cinemaHallMapper.cinemaHallDtoToCinemaHall(cinemaHallDtoToSave)));
     }
 
     public void deleteCinemaHall(Long hallId) {

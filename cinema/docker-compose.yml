@@ -45,6 +45,7 @@ services:
       - "15672:15672"
     networks:
       - spring
+
 #  eureka-server:
 #    image: dimasik30/eureka-server:latest
 #    container_name: eureka-server
@@ -69,6 +70,20 @@ services:
 #      - zipkin
 #      - eureka-server
 
+  customer:
+    image: dimasik30/customer:latest
+    container_name: customer
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - spring
+      - postgres
+    depends_on:
+      - zipkin
+      - postgres
+      - rabbitmq
 
   fraud:
     image: dimasik30/fraud:latest
@@ -82,24 +97,9 @@ services:
       - postgres
     depends_on:
       - zipkin
-#      - eureka-server
       - postgres
       - rabbitmq
-  customer:
-    image: dimasik30/customer:latest
-    container_name: customer
-    ports:
-      - "8080:8080"
-    environment:
-      - SPRING_PROFILES_ACTIVE=docker
-    networks:
-      - spring
-      - postgres
-    depends_on:
-      - zipkin
-#      - eureka-server
-      - postgres
-      - rabbitmq
+
   notification:
     image: dimasik30/notification:latest
     container_name: notification
@@ -112,7 +112,6 @@ services:
       - postgres
     depends_on:
       - zipkin
-#      - eureka-server
       - postgres
       - rabbitmq
 

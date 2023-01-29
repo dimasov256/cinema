@@ -18,7 +18,7 @@ import org.springframework.context.annotation.PropertySources;
         basePackages = "com.cinema.clients"
 )
 @PropertySources({
-        @PropertySource(value = "classpath:clients-${spring.profiles.active}.properties")
+        @PropertySource("classpath:clients-${spring.profiles.active}.properties")
 })
 public class CustomerApplication {
     public static void main(String[] args) {

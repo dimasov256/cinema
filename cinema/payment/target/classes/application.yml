@@ -1,0 +1,25 @@
+server:
+  port:
+    8084
+
+spring:
+  application:
+    name: payment
+  datasource:
+    password: 'root'
+    url: jdbc:mysql://localhost:3306/payment
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        format_sql: true
+    show-sql: true
+
+
+spring.output.ansi.enabled: ALWAYS
+
+
+logging.pattern.console:  "%clr(%d{HH:mm:ss.SSS}){blue} %clr(---){faint} %clr([%15.15t]){yellow} %clr(:){red} %clr(%m){faint}%n"
