@@ -1,7 +1,6 @@
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\services\FilmService.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\web\mappers\LayoutCapacityDecorator.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\domain\LayoutCapacity.java
-C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\services\notification_service\NotificationRestTemplate.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\web\mappers\CinemaHallMapperDecorator.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\web\mappers\FilmMapperDecorator.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\config\JWTAuthFilter.java
@@ -32,11 +31,9 @@ C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\custo
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\services\DataInitialization.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\domain\User.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\web\mappers\LayoutCapacityMapper.java
-C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\web\model\UserDto.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\web\mappers\UserMapperDecorator.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\config\CORSConfig.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\repositories\CinemaHallRepository.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\services\CinemaHallService.java
-C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\services\notification_service\NotificationService.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\domain\BaseEntity.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\web\model\BaseItem.java

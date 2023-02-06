@@ -1,8 +1,8 @@
 package com.cinema.customer.web.controller;
 
 
+import com.cinema.clients.customer.model.UserDto;
 import com.cinema.customer.services.UserService;
-import com.cinema.customer.web.model.UserDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

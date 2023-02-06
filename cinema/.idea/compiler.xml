@@ -42,7 +42,7 @@
       <module name="amqp" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="apigw" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="base-domains" options="-Amapstruct.defaultComponentModel=spring" />
-      <module name="cinema" options="-Amapstruct.defaultComponentModel=spring" />
+      <module name="cinema" options="" />
       <module name="cinema-service" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="clients" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="customer" options="-Amapstruct.defaultComponentModel=spring" />

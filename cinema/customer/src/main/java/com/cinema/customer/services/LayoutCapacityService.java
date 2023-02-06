@@ -3,7 +3,7 @@ package com.cinema.customer.services;
 
 import com.cinema.customer.repositories.LayoutCapacityRepository;
 import com.cinema.customer.web.mappers.LayoutCapacityMapper;
-import com.cinema.customer.web.model.LayoutCapacityDto;
+import com.cinema.clients.customer.model.LayoutCapacityDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -5,71 +5,94 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e7df05e-0ec2-4828-bcb6-d6de4f6a65fd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/base-domains/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base-domains/src/main/java/com/cinema/models/order/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base-domains/src/main/java/com/cinema/models/order/OrderEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clients/src/main/java/com/cinema/clients/order/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clients/src/main/java/com/cinema/clients/order/OrderEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clients/src/main/java/com/cinema/clients/payment/BaseItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clients/src/main/java/com/cinema/clients/payment/EmployeeDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clients/src/main/java/com/cinema/clients/payment/ServiceDataDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/email/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/email/src/main/java/com/cinema/email/EmailApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/email/src/main/java/com/cinema/email/kafka/OrderConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/email/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/email/src/main/resources/banner.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orderservice/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/OrderApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/config/KafkaTopicConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/domain/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/domain/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/domain/OrderProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/kafka/OrderProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orderservice/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orderservice/src/main/resources/banner.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/PaymentApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/domain/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/domain/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/domain/ServiceData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/repositories/EmployeeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/repositories/ServiceDataRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/services/EmployeeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/services/ServiceDataService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/web/mappers/EmployeeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/web/mappers/EmployeeMapperDecorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/web/mappers/ServiceDataMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/web/mappers/ServiceDataMapperDecorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment/src/main/resources/banner.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock/src/main/java/com/cinema/stock/StockApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock/src/main/java/com/cinema/stock/kafka/OrderConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock/src/main/resources/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Service-architecture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clients/src/main/java/com/cinema/clients/customer/cinemahall/CinemaHallClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clients/src/main/java/com/cinema/clients/customer/user/UserClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clients/src/main/java/com/cinema/clients/order/BaseItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clients/src/main/java/com/cinema/clients/order/OrderClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clients/src/main/java/com/cinema/clients/order/OrderEventDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clients/src/main/java/com/cinema/clients/order/OrderProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/domain/OrderEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/repositories/OrderEventRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/repositories/OrderProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/repositories/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/services/OrderEventService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/services/OrderManageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/services/kafka/OrderProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/web/mappers/OrderEventMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/web/mappers/OrderEventMapperDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/web/mappers/OrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/web/mappers/OrderMapperDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/web/mappers/OrderProductDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/web/mappers/OrderProductMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/config/ConfigurationBeans.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/domain/CinemaHall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/services/OrderManageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/services/kafka/KafkaOrderConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock/src/main/java/com/cinema/stock/domain/BaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock/src/main/java/com/cinema/stock/domain/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock/src/main/java/com/cinema/stock/domain/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock/src/main/java/com/cinema/stock/repositories/TransactionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock/src/main/java/com/cinema/stock/services/CinemaHallService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock/src/main/java/com/cinema/stock/services/Datainitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock/src/main/java/com/cinema/stock/services/OrderManageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock/src/main/java/com/cinema/stock/services/TransactionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock/src/main/java/com/cinema/stock/services/kafka/KafkaOrderConsumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amqp/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/amqp/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apigw/target/apigw-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/apigw/target/apigw-1.0-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apigw/target/jib-cache/selectors/29b11805ace77afd26342f7dd83ed29fd182a4e77c2dfa4a19836ccb108e3541" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apigw/target/jib-cache/selectors/a3474033266e92bbc415098c7d6ccf33b5f10ceeecad33f3b2d99afc6a5dd304" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apigw/target/jib-cache/selectors/a6a242814a168a5d5afedbfe7357e6e47f0f9637ebfe83306c10c2b16abda77f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigw/target/jib-cache/jib-classpath-file" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigw/target/jib-cache/jib-main-class-file" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigw/target/jib-cache/layers/25708c53eea1ce248d2009fe1f213b70cef8c9c69b24e1ddd38da877427996e0/51fc41707d645fbea0fbad83adb2ee29eec00dad781ba2927111e15ba52b33cd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigw/target/jib-cache/layers/4bd626453a0794c0e8b28d8bc89c6886f0a3fa49c94c75f2d80722f0c8de872b/e1c2139d49d4d49867285c97f2a41044adcd4af53e00dc3c3e942fa3c5689720" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigw/target/jib-cache/layers/6736adac6028b8b154437ebe2bd4ca14e6ae880981b50faf207f8a99d8d72d27/85faca1f881484f16e8c0b3b95bb2312bb457fc5f5465da1c38d423e573f7b5e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigw/target/jib-cache/layers/a50c5ecc8497dbdeac101ec5a99788407d1cb47dbd16609a3f7905ad14263bd0/8a92d68a06714aa440664553748e9f94d2fb392b216be5da96cb55ac11dc9caa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigw/target/jib-cache/selectors/007faf630592987efd06fefa95da13ccd97cc6d3ddb673ce3a0c9ef8406ed715" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigw/target/jib-cache/selectors/132a6fe5daed0b8def8ace1e9670236572cb3305eca110239460574a4b4ca180" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigw/target/jib-cache/selectors/ade89c5a8e01b29b46e12c4e4069ed140f08f6c20bba975a55f1f60a1f5e286a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigw/target/jib-cache/selectors/bac2ab05e682b97b3349c35ff32f0ab2830589acbbcbecb1164161b3847978cf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigw/target/jib-image.digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigw/target/jib-image.id" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigw/target/jib-image.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/apigw/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/apigw/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/resources/clients-default.properties" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/resources/clients-default.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/target/classes/clients-default.properties" beforeDir="false" afterPath="$PROJECT_DIR$/clients/target/classes/clients-default.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/cinema/clients/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/cinema/clients/order/OrderDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/cinema/clients/order/OrderEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/cinema/clients/payment/EmployeeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/cinema/clients/payment/EmployeeDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clients/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/clients/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/CustomerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/CustomerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/domain/CinemaHall.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/domain/CinemaHall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/clients/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/clients/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/domain/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/domain/Film.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/domain/Layout.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/cinema/clients/customer/model/Layout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/domain/LayoutCapacity.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/domain/LayoutCapacity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/repositories/CinemaHallRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/repositories/CinemaHallRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/services/CinemaHallService.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/services/CinemaHallService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/model/CinemaHallDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/model/CinemaHallDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/resources/application-docker.yml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/resources/application-docker.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/target/classes/application-docker.yml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/target/classes/application-docker.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/services/DataInitialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/services/DataInitialization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/services/FilmService.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/services/FilmService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/services/LayoutCapacityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/services/LayoutCapacityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/services/notification_service/NotificationRestTemplate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/services/notification_service/NotificationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/controller/CinemaHallController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/controller/CinemaHallController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/controller/FilmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/controller/FilmController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/controller/LayoutCapacityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/controller/LayoutCapacityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/mappers/CinemaHallMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/mappers/CinemaHallMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/mappers/CinemaHallMapperDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/mappers/CinemaHallMapperDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/mappers/FilmMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/mappers/FilmMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/mappers/FilmMapperDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/mappers/FilmMapperDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/mappers/LayoutCapacityDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/mappers/LayoutCapacityDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/mappers/LayoutCapacityMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/mappers/LayoutCapacityMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/mappers/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/mappers/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/mappers/UserMapperDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/mappers/UserMapperDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/model/BaseItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/cinema/clients/customer/model/BaseItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/model/CinemaHallDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/cinema/clients/customer/model/CinemaHallDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/model/FilmDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/cinema/clients/customer/model/FilmDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/model/LayoutCapacityDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/cinema/clients/customer/model/LayoutCapacityDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/model/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/cinema/clients/customer/model/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/target/customer-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/customer/target/customer-1.0-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/target/generated-sources/annotations/com/cinema/customer/web/mappers/CinemaHallMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/target/generated-sources/annotations/com/cinema/customer/web/mappers/CinemaHallMapperImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/target/generated-sources/annotations/com/cinema/customer/web/mappers/CinemaHallMapperImpl_.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/target/generated-sources/annotations/com/cinema/customer/web/mappers/CinemaHallMapperImpl_.java" afterDir="false" />
@@ -79,66 +102,97 @@
       <change beforePath="$PROJECT_DIR$/customer/target/generated-sources/annotations/com/cinema/customer/web/mappers/LayoutCapacityMapperImpl_.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/target/generated-sources/annotations/com/cinema/customer/web/mappers/LayoutCapacityMapperImpl_.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/target/generated-sources/annotations/com/cinema/customer/web/mappers/UserMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/target/generated-sources/annotations/com/cinema/customer/web/mappers/UserMapperImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/target/generated-sources/annotations/com/cinema/customer/web/mappers/UserMapperImpl_.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/target/generated-sources/annotations/com/cinema/customer/web/mappers/UserMapperImpl_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/target/jib-cache/jib-classpath-file" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/target/jib-cache/jib-main-class-file" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/target/jib-cache/layers/0227343b173f206b9d270f7a66dc49ab02233b6d12e0cdbdf30083d54ac36ffd/40095b4bd3c8fc5d6611ee262bf91cdb6503d83cc0720733b5e988ccac3fb182" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/target/jib-cache/layers/06d8829b50ada11b1837db28c9b8071e1056f8c6cd6f7464054aed1758f2f202/b2b999c018c83c16b98506134b408326b7c10a02066d9b8ee51bf1812353ec17" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/target/jib-cache/layers/6d67d932b0dcbb772335792fb8007e6f9dca254467d2d673a4b5fb2cd4bee282/f0f85bf438de28986a4c215f228cd89f9fdf9d92711849c0bf33509ad1516675" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/target/jib-cache/layers/6e544938f8c714f155ffadf89063f99d3c1c7b0f80f045ef41bfafa2f190f34a/84dc8288075ec08622dcd2ce024a552c94b0201bbefc0062d2c0abca78b638e9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/target/jib-cache/layers/898be83dbcd4c42205dcfa00681dcba55fd023cd95b774a7c3d45cfcf52aad78/775e71eaad46070635b014f40f2c20da4b5d979b3abe154c5fd993cef2fd89fb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/target/jib-cache/selectors/2be582180b1dd00f7f5261687ab965f4674c5b8287418f2248af97fb25d8ddd5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/target/jib-cache/selectors/7ac251be29fb27e7d138a3b4a42c50771854c56d395bedaa90ec4239a23f6e02" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/target/jib-cache/selectors/a1f0187ddb996df63b40136c1d8146591d04b9b5d53840bbe57765dfad03cd5f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/target/jib-cache/selectors/e48b7b7da4acaa710c088856f0c366f944bcd19c512570e24cf3d3eb4954fd84" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/target/jib-cache/selectors/fb2f1f026d86e12ff10f1158f1d83f682436f8e0ee4d04b362b80af700c9750b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/target/jib-image.digest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/target/jib-image.id" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/target/jib-image.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/customer/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/customer/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/customer/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eureka-server/target/eureka-server-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/target/eureka-server-1.0-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/target/jib-cache/selectors/0ae633d8d673d71abd357cacd9e9a2e5e3c0d55eb965f1c531ece1c5a58c0399" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/target/jib-cache/selectors/7ffff6f3a6a201702b3ef7205d209caf05f32eaa294012e3c1d16fae69ded47f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/target/jib-cache/selectors/8c44787b8c9c730b905e3fb60bee87ee622d37b6497a438f00b155a61186d6a2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/target/jib-cache/jib-classpath-file" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/target/jib-cache/jib-main-class-file" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/target/jib-cache/layers/4e791024c0ee5b9e8e88f49c1decf53ff0045c551ec53f3543ba5f7c0daf00f5/3cba0126eee8effef0eef9f8eb2f6cdf23e2ddd663e34c29fa223e766300edfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/target/jib-cache/layers/a9d79d2db3cbe96e1a0cdd1f6291ed6122ca5cd2ca1d4c64a7b1dc7c84616ff9/bf1f62379824007fdb81d2a18e796d899cb763d43846d15ef72ed4efe02c4925" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/target/jib-cache/layers/f7617f7dc956b957aff60fe49334e0224387d73d173c574d63a6eaf5158c9831/8aca1709ba88eea1ea583530c1f1713f653ed55993a89218332637d8bca4fda5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/target/jib-cache/layers/f907744ca860fd2b8a6c508be6bb409d8a92f4aa771a8a6bd23e4f9ff41e47aa/7ec65136f9220c018bacc82a082c8186a610de6d819cf5dc23eb0134b6e9009a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/target/jib-cache/selectors/59370653a8cb869a261fa6865dbbc533348eac4cd2ecb5e36b7c5f33f0e492e8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/target/jib-cache/selectors/6f07b79ae31ba1eead7656eb1e6a290c84f22869d4a3ea19350cf0535dfec87e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/target/jib-cache/selectors/73932955310d4c23bf252cb3d2ef9973ab2e33107ec29caae93f26f7167d7910" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/target/jib-cache/selectors/bb28c6de68f6736253ddde64b54a492fc1dc5aae83a4c6ca087dadd6d6d19331" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/target/jib-image.digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/target/jib-image.id" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/target/jib-image.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/eureka-server/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/src/main/resources/application-docker.yml" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/resources/application-docker.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/src/main/resources/application-kube.yml" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/resources/application-kube.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/target/classes/application-docker.yml" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/target/classes/application-docker.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/target/classes/application-kube.yml" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/target/classes/application-kube.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fraud/target/fraud-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/target/fraud-1.0-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fraud/target/generated-sources/annotations/com/cinema/fraud/web/mappers/FraudMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/target/generated-sources/annotations/com/cinema/fraud/web/mappers/FraudMapperImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fraud/target/generated-sources/annotations/com/cinema/fraud/web/mappers/FraudMapperImpl_.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/target/generated-sources/annotations/com/cinema/fraud/web/mappers/FraudMapperImpl_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/target/jib-cache/layers/310b46aeaf3aec2f0face87cdc3b1bb19bc43d4ec4048c392ec889606193faa1/6f5fcc52aa0e0e67daa02bffcf7910df893e6a74568251ec7a2c646055d81044" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/target/jib-cache/layers/b084c135e11950be7e0e0a3a5bde258f0e866968893629defc9f969c08b80138/36062e3c77cbd3e251f35795708a451a2df05121eb05eb25947fee253be54da7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/target/jib-cache/selectors/69f3a6100eb0e49394270c186018d520b3a962071e72af431b6f862d4d2e81d4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/target/jib-cache/selectors/c3959793060a0bddcfa7d7fe6f860a47e5c8969cd47b553ae87460139085fb99" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/target/jib-cache/selectors/d7f958cc9a8265e041f7b7caf2d08714d59733f5acd4f0952c53599932959b56" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/target/jib-cache/selectors/fcfdd82b0e80ee8c822d45081f8bb5ae466e429087f6151c40d46afba8cf8e37" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/target/jib-image.digest" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/target/jib-image.digest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/target/jib-image.id" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/target/jib-image.id" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/target/jib-image.json" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/target/jib-image.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/target/jib-cache/jib-classpath-file" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/target/jib-cache/jib-main-class-file" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/target/jib-cache/layers/277ae1d555aff5cfbed6d40dcdf2323d32f1ee2c2dd1c110200cd22937379bee/c3ad3f1ea581511bab4540f3801fe5e03a5463005704b1bec2a067082e0ec0ae" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/target/jib-cache/layers/3c689d09efe7997ea3ef16d1b838b01cc92b2b77817aa3661a3ae706ac5149d4/16ad8c1c1108df1052e483f7ce087bd506518f44096a3900c53d76297fc396de" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/target/jib-cache/layers/889ef95b6b8c213fd868326b26ad2bd71e0f482f7ea3185bd255e77049d9bf49/a9633c8c5d51ca33a984299cc081766152079d550ce356ed76c6d0f827174c1c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/target/jib-cache/layers/cc3f68853ef6cf2501cb36507f4874fccb0ad6c53ccfe3d5af20ea219b3bf507/4e2e94c17622dc87ebd88733c05f3c9a34f0a91f696f04bb21ea4ad5ecae4ab1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/target/jib-cache/layers/de55ce63a0f33b57b2b17948dba393e3ad365ee8bd307338d4ae5588a546284e/abd8ea9c2c35124f40a5e2c162cd15ed5c99c86208ee95b0fa7a7c2eff01226c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/target/jib-cache/selectors/3431b09336f40a82450071b6b989b117306f1f87fad9a5952f94f82ccfe739a9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/target/jib-cache/selectors/36b3b789238f979946f3970ab32bd6511d8c2d69612909643819fb8d38817532" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/target/jib-cache/selectors/400a78a5a1cbfed916921cb84f2f8bbf8a1c660e247ccc25b76013a1c18f2746" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/target/jib-cache/selectors/7f92f4c15a4e9171b075cf50d5bfdbcf088db229b8a74bd18f4c75c0fbf79a23" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/target/jib-cache/selectors/876d087510a1a6f63b4a19496953a04a5b1dd18b5e72705c720495ea81a0016a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/target/jib-image.digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/target/jib-image.id" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/target/jib-image.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/fraud/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/main/resources/application-docker.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/resources/application-docker.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/main/resources/application-kube.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/resources/application-kube.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/target/classes/application-docker.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/target/classes/application-docker.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/target/classes/application-kube.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/target/classes/application-kube.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notification/target/generated-sources/annotations/com/cinema/notification/web/mappers/NotificationMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/target/generated-sources/annotations/com/cinema/notification/web/mappers/NotificationMapperImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notification/target/generated-sources/annotations/com/cinema/notification/web/mappers/NotificationMapperImpl_.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/target/generated-sources/annotations/com/cinema/notification/web/mappers/NotificationMapperImpl_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/target/jib-cache/layers/898be83dbcd4c42205dcfa00681dcba55fd023cd95b774a7c3d45cfcf52aad78/775e71eaad46070635b014f40f2c20da4b5d979b3abe154c5fd993cef2fd89fb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/target/jib-cache/layers/8c26b3cda423814e4d7ffa4ffd7d362111e7ea6d6cd926f7902f2eeaca139cc9/107ef59e5929a7935ab4edba33cd551e6e29c9c18b929f6c5f643ff4ba56f58c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/target/jib-cache/selectors/3c20f69fd9d9231b5cab52c5ab5537f52bcf325b0c352d046fd954137e31b1ac" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/target/jib-cache/selectors/69df9a153e29a1153e1561d998f2b050db0eaaedc28f52708adb01d0c74984ca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/target/jib-cache/selectors/920c7b7e1b7fc7c6840458ab1eb63265286458c006b09dfa5e0cc7da911cecd9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/target/jib-cache/selectors/e48b7b7da4acaa710c088856f0c366f944bcd19c512570e24cf3d3eb4954fd84" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/target/jib-image.digest" beforeDir="false" afterPath="$PROJECT_DIR$/notification/target/jib-image.digest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/target/jib-image.id" beforeDir="false" afterPath="$PROJECT_DIR$/notification/target/jib-image.id" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/target/jib-image.json" beforeDir="false" afterPath="$PROJECT_DIR$/notification/target/jib-image.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/target/jib-cache/jib-classpath-file" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/target/jib-cache/jib-main-class-file" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/target/jib-cache/layers/3185476a4aa64eb1d0b6834ceed87efeadb5e4740be9a3d8f2502bb0c9d84b5d/7a38517ff74ebe1fa642229a4b7ddb52ce8d47d57281750739a36d51fa894e66" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/target/jib-cache/layers/42210ccab2a715364ba2251e8a4dfc4b8af7928fac6f5e1ca2e5d380874d4898/c7d8a83a8e31378060e4b5ccf68d3ee72547c6ed8f0c95a6804f06390d15a6e0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/target/jib-cache/layers/6292c9f000feebd18c7321ede8dc99e2456e38ac3de17d84858db52523dacd8f/4bebde4621a7a24b9114e02c6e3c41f95194e51791fa0f5a646b740a4bccb74e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/target/jib-cache/layers/df792bf25837f9de7e6d47a229c03ba342b69644df6088678279ae796b884b7a/3e30b45f196934827eb6c62463b19b71675f8dc5d7aa8dd9a614aa04fe1d19a7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/target/jib-cache/layers/edba56cfb17bbcabcf8e5a1eea37621ca57bb882ed17d8760c9eec339d6459d3/98625bf0d90915ff02080f41c17223a8092d921b46a06cf156177e05d7617af2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/target/jib-cache/selectors/35c98091d2dcceab2f8f2a535e1b01b095f4e26df1d50584dd87f307154c8ba0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/target/jib-cache/selectors/72153a13d83e5d26dbd0a58ffb4204413379625aed1a6fd4a594c2c4548d65fb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/target/jib-cache/selectors/93cbb182639b32df8edd75e28a24dc9bd930bc0933e7a3a37a697971c2d571ef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/target/jib-cache/selectors/a232974459c2e1d9ceee511a6bb315ab1374855764ccf9d4ec67ef7b95240ca2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/target/jib-cache/selectors/b6901f46d0a1533b1f7736edf6dbc8e2d9494d7cb02f4f8c7922322198226332" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/target/jib-image.digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/target/jib-image.id" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/target/jib-image.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/notification/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notification/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notification/target/notification-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/notification/target/notification-1.0-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orderservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/orderservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/OrderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/OrderApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/config/KafkaTopicConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/config/KafkaConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/web/controllers/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/domain/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/domain/OrderProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/domain/OrderProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/kafka/OrderProducer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orderservice/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/orderservice/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orderservice/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/orderservice/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orderservice/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/orderservice/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orderservice/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/orderservice/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orderservice/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/orderservice/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/payment/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/PaymentApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/PaymentApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/domain/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/domain/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/domain/ServiceData.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/domain/ServiceData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/services/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/services/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/web/mappers/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment/src/main/java/com/cinema/payment/web/mappers/EmployeeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/payment/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/payment/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/target/generated-sources/annotations/com/cinema/payment/web/mappers/EmployeeMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment/target/generated-sources/annotations/com/cinema/payment/web/mappers/EmployeeMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/target/generated-sources/annotations/com/cinema/payment/web/mappers/EmployeeMapperImpl_.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment/target/generated-sources/annotations/com/cinema/payment/web/mappers/EmployeeMapperImpl_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/target/generated-sources/annotations/com/cinema/payment/web/mappers/ServiceDataMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment/target/generated-sources/annotations/com/cinema/payment/web/mappers/ServiceDataMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/target/generated-sources/annotations/com/cinema/payment/web/mappers/ServiceDataMapperImpl_.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment/target/generated-sources/annotations/com/cinema/payment/web/mappers/ServiceDataMapperImpl_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/payment/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/payment/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/payment/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/stock/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/src/main/java/com/cinema/stock/StockApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/main/java/com/cinema/stock/StockApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/src/main/java/com/cinema/stock/kafka/OrderConsumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/stock/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/stock/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/stock/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/stock/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,52 +220,60 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2KUlsEgqx6iOjGKCCzq4DF0L68G" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/Brux/IdeaProjects/cinema/cinema/clients/src/main/java/com/cinema/clients",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Brux/IdeaProjects/cinema/cinema/clients/src/main/java/com/cinema/clients/customer&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.cinema.order.web.mappers" />
       <recent name="com.cinema.payment.web.mappers" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Brux\IdeaProjects\cinema\cinema\clients\src\main\java\com\cinema\clients\customer" />
       <recent name="C:\Users\Brux\IdeaProjects\cinema\cinema\clients\src\main\java\com\cinema\clients" />
       <recent name="C:\Users\Brux\IdeaProjects\cinema\cinema\email\src\main\resources" />
       <recent name="C:\Users\Brux\IdeaProjects\cinema\cinema\stock\src\main\resources" />
       <recent name="C:\Users\Brux\IdeaProjects\cinema\cinema\orderservice\src\main\resources" />
-      <recent name="C:\Users\Brux\IdeaProjects\cinema\cinema\payment\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Brux\IdeaProjects\cinema\cinema" />
       <recent name="C:\Users\Brux\IdeaProjects\cinema\cinema\k8s\minikube\services" />
       <recent name="C:\Users\Brux\IdeaProjects\cinema\cinema\k8s\minikube\fraud" />
       <recent name="C:\Users\Brux\IdeaProjects\cinema\cinema\clients\src\main\java" />
       <recent name="C:\Users\Brux\IdeaProjects\cinema\cinema\clients\src\main\com.cinema.clients\fraud" />
-      <recent name="C:\Users\Brux\IdeaProjects\cinema\cinema\clients\src\main\com.cinema.clients" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.cinema.clients.customer.model" />
+      <recent name="com.cinema.clients.customer.cinemahall" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.cinema.stock.domain" />
+      <recent name="com.cinema.clients.order" />
       <recent name="com.cinema.models.payment" />
       <recent name="com.cinema.payment.domain" />
       <recent name="com.cinema.order.domain" />
-      <recent name="com.cinema.models" />
-      <recent name="com.cinema.orderservice.domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PaymentApplication">
+  <component name="RunManager" selected="Application.StockApplication">
     <configuration name="CustomerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="SPRING_PROFILES_ACTIVE" value="default" />
@@ -293,11 +355,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StockApplication" />
         <item itemvalue="Application.PaymentApplication" />
         <item itemvalue="Application.OrderApplication" />
-        <item itemvalue="Application.EmailApplication" />
-        <item itemvalue="Application.StockApplication" />
         <item itemvalue="Application.CustomerApplication" />
+        <item itemvalue="Application.EmailApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -330,6 +392,26 @@
           <url>file://$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/controllers/OrderController.java</url>
           <line>42</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/services/UserService.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/customer/src/main/java/com/cinema/customer/web/controller/UserController.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/orderservice/src/main/java/com/cinema/order/services/kafka/OrderProducer.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/stock/src/main/java/com/cinema/stock/services/OrderManageService.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

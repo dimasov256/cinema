@@ -1,1 +1,7 @@
+com\cinema\stock\domain\Transaction.class
+com\cinema\stock\domain\Order$OrderBuilder.class
+com\cinema\stock\domain\Transaction$TransactionBuilder.class
+com\cinema\stock\domain\BaseEntity.class
+com\cinema\stock\domain\Order.class
 com\cinema\stock\StockApplication.class
+com\cinema\stock\kafka\OrderConsumer.class

@@ -1,8 +1,10 @@
 package com.cinema.customer.services;
 
+import com.cinema.clients.order.OrderDto;
+import com.cinema.clients.order.OrderClient;
 import com.cinema.customer.repositories.FilmRepository;
 import com.cinema.customer.web.mappers.FilmMapper;
-import com.cinema.customer.web.model.FilmDto;
+import com.cinema.clients.customer.model.FilmDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +19,8 @@ public class FilmService {
     private final FilmRepository filmRepository;
     private final FilmMapper filmMapper;
 
+    private final OrderClient orderClient;
+
     public List<FilmDto> getAllFilms() {
         return filmRepository.findAll().stream()
                 .map(filmMapper::filmToFilmDto)
@@ -30,6 +34,18 @@ public class FilmService {
     }
 
     public FilmDto createFilm(FilmDto filmDto) {
+
+        OrderDto orderDto = OrderDto
+                .builder()
+                .orderName(filmDto.getTitle())
+                .price(24.90)
+                .place(filmDto.getCinemaHall().getLocation())
+                .userId(filmDto.getUser().getId())
+                .status("NEW")
+                .build();
+
+        orderClient.palaceOrder(orderDto);
+
         return filmMapper.filmToFilmDto(filmRepository.save(filmMapper.filmDtoToFilm(filmDto)));
     }
 

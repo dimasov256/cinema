@@ -1,5 +1,6 @@
 package com.cinema.customer.domain;
 
+import com.cinema.clients.customer.model.Layout;
 import lombok.*;
 
 import javax.persistence.Entity;

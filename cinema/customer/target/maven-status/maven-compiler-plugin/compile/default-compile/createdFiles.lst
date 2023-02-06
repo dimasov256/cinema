@@ -3,9 +3,7 @@ com\cinema\customer\web\mappers\CinemaHallMapper.class
 com\cinema\customer\web\mappers\CinemaHallMapperImpl_.class
 com\cinema\customer\services\DataInitialization.class
 com\cinema\customer\web\controller\ValidateUserController.class
-com\cinema\customer\services\notification_service\NotificationRestTemplate.class
 com\cinema\customer\web\mappers\CinemaHallMapperImpl.class
-com\cinema\customer\web\model\UserDto$UserDtoBuilder.class
 com\cinema\customer\domain\Film.class
 com\cinema\customer\web\mappers\FilmMapperImpl_.class
 com\cinema\customer\web\mappers\UserMapperImpl_.class
@@ -23,7 +21,6 @@ com\cinema\customer\web\mappers\UserMapperImpl.class
 com\cinema\customer\web\mappers\FilmMapper.class
 com\cinema\customer\repositories\LayoutCapacityRepository.class
 com\cinema\customer\web\controller\NotFoundException.class
-com\cinema\customer\web\model\UserDto.class
 com\cinema\customer\web\controller\FilmController.class
 com\cinema\customer\config\CORSConfig.class
 com\cinema\customer\web\model\FilmDto$FilmDtoBuilder.class
@@ -41,7 +38,6 @@ com\cinema\customer\web\mappers\LayoutCapacityMapper.class
 com\cinema\customer\web\model\LayoutCapacityDto$LayoutCapacityDtoBuilder.class
 com\cinema\customer\configuration\ConfigurationBeans.class
 com\cinema\customer\web\mappers\UserMapperDecorator.class
-com\cinema\customer\services\notification_service\NotificationService.class
 com\cinema\customer\web\mappers\LayoutCapacityMapperImpl.class
 com\cinema\customer\web\model\CinemaHallDto$CinemaHallDtoBuilder.class
 com\cinema\customer\web\mappers\CinemaHallMapperDecorator.class

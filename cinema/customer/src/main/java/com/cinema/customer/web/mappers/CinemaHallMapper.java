@@ -2,7 +2,7 @@ package com.cinema.customer.web.mappers;
 
 
 import com.cinema.customer.domain.CinemaHall;
-import com.cinema.customer.web.model.CinemaHallDto;
+import com.cinema.clients.customer.model.CinemaHallDto;
 import org.mapstruct.DecoratedWith;
 import org.mapstruct.Mapper;
 

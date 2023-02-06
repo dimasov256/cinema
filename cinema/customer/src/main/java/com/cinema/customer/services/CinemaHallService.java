@@ -4,7 +4,7 @@ package com.cinema.customer.services;
 import com.cinema.customer.repositories.CinemaHallRepository;
 import com.cinema.customer.web.controller.NotFoundException;
 import com.cinema.customer.web.mappers.CinemaHallMapper;
-import com.cinema.customer.web.model.CinemaHallDto;
+import com.cinema.clients.customer.model.CinemaHallDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -29,7 +29,7 @@ public class CinemaHallService {
                         (cinemaHallRepository.findById(hallId).orElseThrow(() -> new NotFoundException("Not found Hall with ID: " + hallId)));
     }
 
-    public CinemaHallDto createFilm(CinemaHallDto cinemaHallDto) {
+    public CinemaHallDto createCinemaHall(CinemaHallDto cinemaHallDto) {
         return cinemaHallMapper
                 .cinemaHallToCinemaHallDto(
                         cinemaHallRepository.save(
@@ -51,5 +51,9 @@ public class CinemaHallService {
 
     public void deleteCinemaHall(Long hallId) {
         cinemaHallRepository.deleteById(hallId);
+    }
+
+    public CinemaHallDto getCinemaHallByLocation(String location) {
+        return cinemaHallRepository.findCinemaHallByLocation(location);
     }
 }

@@ -1,7 +1,7 @@
 package com.cinema.customer.web.controller;
 
 import com.cinema.customer.services.LayoutCapacityService;
-import com.cinema.customer.web.model.LayoutCapacityDto;
+import com.cinema.clients.customer.model.LayoutCapacityDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

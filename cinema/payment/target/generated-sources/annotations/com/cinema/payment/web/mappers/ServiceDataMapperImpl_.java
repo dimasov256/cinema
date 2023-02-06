@@ -4,6 +4,7 @@ import com.cinema.clients.payment.EmployeeDto;
 import com.cinema.clients.payment.ServiceDataDto;
 import com.cinema.clients.payment.ServiceDataDto.ServiceDataDtoBuilder;
 import com.cinema.payment.domain.Employee;
+import com.cinema.payment.domain.Employee.EmployeeBuilder;
 import com.cinema.payment.domain.ServiceData;
 import java.sql.Timestamp;
 import javax.annotation.processing.Generated;
@@ -12,8 +13,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-01-29T12:45:02+0200",
-    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.1 (Oracle Corporation)"
+    date = "2023-02-01T14:40:09+0200",
+    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.4.1 (Oracle Corporation)"
 )
 @Component
 @Qualifier("delegate")
@@ -57,16 +58,15 @@ public class ServiceDataMapperImpl_ implements ServiceDataMapper {
             return null;
         }
 
-        Long id = null;
-        Timestamp lastUpdate = null;
-        Long user_id = null;
+        EmployeeBuilder employee = Employee.builder();
 
-        id = employeeDto.getId();
-        lastUpdate = employeeDto.getLastUpdate();
-        user_id = employeeDto.getUser_id();
+        employee.id( employeeDto.getId() );
+        employee.lastUpdate( employeeDto.getLastUpdate() );
+        employee.user_id( employeeDto.getUser_id() );
+        employee.userName( employeeDto.getUserName() );
+        employee.amountAvailable( employeeDto.getAmountAvailable() );
+        employee.amountReserved( employeeDto.getAmountReserved() );
 
-        Employee employee = new Employee( id, lastUpdate, user_id );
-
-        return employee;
+        return employee.build();
     }
 }

@@ -9,7 +9,7 @@ import com.cinema.customer.repositories.CinemaHallRepository;
 import com.cinema.customer.repositories.FilmRepository;
 import com.cinema.customer.repositories.LayoutCapacityRepository;
 import com.cinema.customer.repositories.UserRepository;
-import com.cinema.customer.domain.Layout;
+import com.cinema.clients.customer.model.Layout;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
@@ -63,7 +63,13 @@ public class DataInitialization {
             moskva.setCapacity(LayoutCapacity.builder().capacity(15).layout(Layout.USHAPE).build());
             cinemaHallRepository.save(moskva);
 
-            User user = User.builder().name("matt").password("secret").email("some@email.com").build();
+            User user = User.builder()
+                    .name("matt")
+                    .password("secret")
+                    .email("some@email.com")
+                    .amountReserved(156.5)
+                    .amountAvailable(406.0)
+                    .build();
             userRepository.save(user);
 
 

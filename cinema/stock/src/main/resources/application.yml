@@ -2,6 +2,23 @@ server:
   port:
     8085
 
+spring:
+  application:
+    name: stock
+  datasource:
+    password: 'root'
+    url: jdbc:mysql://localhost:3306/stock
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        format_sql: true
+    show-sql: true
+
+
 spring.kafka.consumer.bootstrap-servers: localhost:9092
 spring.kafka.consumer.group-id: stock
 spring.kafka.topic.name: order_topic

@@ -2,15 +2,13 @@ package com.cinema.customer.services;
 
 
 import com.cinema.amqp.RabbitMqMessageProducer;
+import com.cinema.clients.customer.model.UserDto;
 import com.cinema.clients.fraud.FraudClient;
 import com.cinema.clients.notification.models.NotificationDto;
-import com.cinema.clients.notification.notification.NotificationClient;
 import com.cinema.customer.domain.User;
 import com.cinema.customer.repositories.UserRepository;
-import com.cinema.customer.services.notification_service.NotificationRestTemplate;
 import com.cinema.customer.web.controller.NotFoundException;
 import com.cinema.customer.web.mappers.UserMapper;
-import com.cinema.customer.web.model.UserDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -21,11 +19,8 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class UserService {
     private final UserRepository userRepository;
-    private final NotificationRestTemplate notificationRestTemplate;
     private final FraudClient fraudClient;
     private final UserMapper userMapper;
-
-//    private final NotificationClient notificationClient;
     private final RabbitMqMessageProducer rabbitMqMessageProducer;
 
     public List<UserDto> getAllUsers() {
@@ -62,7 +57,6 @@ public class UserService {
                 .toUserEmail(userToSave.getEmail())
                 .build();
 
-//        notificationClient.sentNotification(notificationToSave);
 
         rabbitMqMessageProducer.publish(
                 notificationToSave,

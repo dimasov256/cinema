@@ -18,4 +18,5 @@ public class ServiceData extends BaseEntity {
 
     @ManyToOne
     private Employee employee;
+
 }

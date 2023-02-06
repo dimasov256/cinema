@@ -1,16 +1,16 @@
 package com.cinema.customer.web.mappers;
 
+import com.cinema.clients.customer.model.UserDto;
+import com.cinema.clients.customer.model.UserDto.UserDtoBuilder;
 import com.cinema.customer.domain.User;
 import com.cinema.customer.domain.User.UserBuilder;
-import com.cinema.customer.web.model.UserDto;
-import com.cinema.customer.web.model.UserDto.UserDtoBuilder;
 import javax.annotation.processing.Generated;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-01-28T13:21:30+0200",
+    date = "2023-02-02T12:20:09+0200",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.1 (Oracle Corporation)"
 )
 @Component
@@ -30,6 +30,8 @@ public class UserMapperImpl_ implements UserMapper {
         userDto.name( user.getName() );
         userDto.password( user.getPassword() );
         userDto.email( user.getEmail() );
+        userDto.amountAvailable( user.getAmountAvailable() );
+        userDto.amountReserved( user.getAmountReserved() );
 
         return userDto.build();
     }
@@ -47,6 +49,8 @@ public class UserMapperImpl_ implements UserMapper {
         user.name( userDto.getName() );
         user.password( userDto.getPassword() );
         user.email( userDto.getEmail() );
+        user.amountAvailable( userDto.getAmountAvailable() );
+        user.amountReserved( userDto.getAmountReserved() );
 
         return user.build();
     }

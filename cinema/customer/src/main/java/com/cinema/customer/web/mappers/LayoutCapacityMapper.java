@@ -1,7 +1,7 @@
 package com.cinema.customer.web.mappers;
 
 import com.cinema.customer.domain.LayoutCapacity;
-import com.cinema.customer.web.model.LayoutCapacityDto;
+import com.cinema.clients.customer.model.LayoutCapacityDto;
 import org.mapstruct.DecoratedWith;
 import org.mapstruct.Mapper;
 

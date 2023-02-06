@@ -1,5 +1,6 @@
 package com.cinema.order.domain;
 
+import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -13,14 +14,11 @@ import java.sql.Timestamp;
 @Table(name = "order_product")
 public class OrderProduct extends BaseEntity {
 
-    public OrderProduct(Long id,
-                        Timestamp lastUpdate,
-                        Long productId) {
+    @Builder
+    public OrderProduct(Long id, Timestamp lastUpdate, Order order) {
         super(id, lastUpdate);
-        this.productId = productId;
+        this.order = order;
     }
-
     @ManyToOne
     private Order order;
-    private Long productId;
 }

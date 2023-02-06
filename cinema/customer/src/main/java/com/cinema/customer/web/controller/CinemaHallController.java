@@ -1,8 +1,9 @@
 package com.cinema.customer.web.controller;
 
 
+import com.cinema.customer.domain.CinemaHall;
 import com.cinema.customer.services.CinemaHallService;
-import com.cinema.customer.web.model.CinemaHallDto;
+import com.cinema.clients.customer.model.CinemaHallDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +14,6 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/")
-@CrossOrigin(origins = "http://localhost:4200")
 public class CinemaHallController {
 
     private final CinemaHallService cinemaHallService;
@@ -28,9 +28,14 @@ public class CinemaHallController {
         return new ResponseEntity<>(cinemaHallService.getCinemaHallById(hallId), HttpStatus.OK);
     }
 
+    @GetMapping("/cinemaHalls/{location}")
+    public ResponseEntity<CinemaHallDto> getCinemaHallByLocation(@PathVariable("location")String location) {
+        return new ResponseEntity<>(cinemaHallService.getCinemaHallByLocation(location), HttpStatus.OK);
+    }
+
     @PostMapping("/cinemaHalls")
     public ResponseEntity<CinemaHallDto> createCinemaHall(@RequestBody CinemaHallDto cinemaHallDto) {
-        return new ResponseEntity<>(cinemaHallService.createFilm(cinemaHallDto), HttpStatus.CREATED);
+        return new ResponseEntity<>(cinemaHallService.createCinemaHall(cinemaHallDto), HttpStatus.CREATED);
     }
 
     @PutMapping("/cinemaHalls/{hallId}")

@@ -39,7 +39,11 @@ spring.kafka.producer.bootstrap-server: localhost:9092
 spring.kafka.producer.key-serializer: org.apache.kafka.common.serialization.StringSerializer
 spring.kafka.producer.value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
-spring.kafka.topic.name: order_topic
+spring.kafka.topic.name: order-topic
+spring.kafka.topic.payment-order: payment_order
+spring.kafka.topic.stock: stock-topic
+
+
 
 
 logging.pattern.console:  "%clr(%d{HH:mm:ss.SSS}){blue} %clr(---){faint} %clr([%15.15t]){yellow} %clr(:){red} %clr(%m){faint}%n"

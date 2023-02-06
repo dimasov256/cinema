@@ -1,8 +1,8 @@
 package com.cinema.customer.web.mappers;
 
 
+import com.cinema.clients.customer.model.UserDto;
 import com.cinema.customer.domain.User;
-import com.cinema.customer.web.model.UserDto;
 import org.mapstruct.DecoratedWith;
 import org.mapstruct.Mapper;
 

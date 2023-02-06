@@ -1,5 +1,6 @@
 package com.cinema.order.domain;
 
+import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -12,10 +13,27 @@ import java.sql.Timestamp;
 @Table(name = "order_table")
 public class Order extends BaseEntity{
 
-    public Order(Long id, Timestamp lastUpdate, Long user_id) {
+    @Builder
+    public Order(Long id,
+                 Timestamp lastUpdate,
+                 Long user_id,
+                 String place,
+                 String orderName,
+                 double price,
+                 String status,
+                 String source) {
         super(id, lastUpdate);
         this.user_id = user_id;
+        this.place = place;
+        this.orderName = orderName;
+        this.price = price;
+        this.status = status;
+        this.source = source;
     }
-
     private Long user_id;
+    private String place;
+    private String orderName;
+    private double price;
+    private String status;
+    private String source;
 }
