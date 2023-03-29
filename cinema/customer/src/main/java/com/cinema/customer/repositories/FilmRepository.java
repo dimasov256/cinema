@@ -11,4 +11,5 @@ public interface FilmRepository extends JpaRepository<Film, Long> {
     Film findFilmById(Long filmId);
     void deleteById(Long id);
     List<Film> findAllByDate(Date date);
+
 }

@@ -1,7 +1,9 @@
 package com.cinema.customer.web.controller;
 
 
+import com.cinema.clients.customer.model.CityDto;
 import com.cinema.customer.domain.CinemaHall;
+import com.cinema.customer.domain.City;
 import com.cinema.customer.services.CinemaHallService;
 import com.cinema.clients.customer.model.CinemaHallDto;
 import lombok.RequiredArgsConstructor;
@@ -28,7 +30,7 @@ public class CinemaHallController {
         return new ResponseEntity<>(cinemaHallService.getCinemaHallById(hallId), HttpStatus.OK);
     }
 
-    @GetMapping("/cinemaHalls/{location}")
+    @GetMapping("/cinemaHallsLocation/{location}")
     public ResponseEntity<CinemaHallDto> getCinemaHallByLocation(@PathVariable("location")String location) {
         return new ResponseEntity<>(cinemaHallService.getCinemaHallByLocation(location), HttpStatus.OK);
     }
@@ -39,12 +41,18 @@ public class CinemaHallController {
     }
 
     @PutMapping("/cinemaHalls/{hallId}")
-    public ResponseEntity<CinemaHallDto> updateCinemaHall(@PathVariable("hallId") Long hallId, @RequestBody CinemaHallDto cinemaHallDto) {
+    public ResponseEntity<CinemaHallDto> updateCinemaHall(@PathVariable("hallId") Long hallId,
+                                                          @RequestBody CinemaHallDto cinemaHallDto) {
         return new ResponseEntity<>(cinemaHallService.updateCinemaHall(hallId, cinemaHallDto), HttpStatus.OK);
     }
 
     @DeleteMapping("/cinemaHalls/{hallId}")
     public void deleteCinemaHall(@PathVariable() Long hallId) {
         cinemaHallService.deleteCinemaHall(hallId);
+    }
+
+    @GetMapping("/cinemaHalls/city")
+    public ResponseEntity<List<CinemaHallDto>> getCinemaHallsByCity(@RequestBody CityDto city) {
+        return new ResponseEntity<>(cinemaHallService.getCinemaHallsByCity(city), HttpStatus.OK);
     }
 }

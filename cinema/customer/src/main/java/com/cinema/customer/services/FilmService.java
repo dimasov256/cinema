@@ -6,20 +6,26 @@ import com.cinema.customer.repositories.FilmRepository;
 import com.cinema.customer.web.mappers.FilmMapper;
 import com.cinema.clients.customer.model.FilmDto;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.sql.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static java.sql.Timestamp.valueOf;
+import static java.time.LocalDateTime.now;
+
+
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class FilmService {
 
     private final FilmRepository filmRepository;
     private final FilmMapper filmMapper;
-
     private final OrderClient orderClient;
+
 
     public List<FilmDto> getAllFilms() {
         return filmRepository.findAll().stream()
@@ -28,15 +34,15 @@ public class FilmService {
     }
 
     public FilmDto findFilmById(Long filmId) {
-        return filmMapper
-                .filmToFilmDto
-                        (filmRepository.findById(filmId).get());
+        return filmMapper.filmToFilmDto(filmRepository.findById(filmId)
+                .orElseThrow(() -> new RuntimeException("Film not present. Film ID: " + filmId)));
     }
 
     public FilmDto createFilm(FilmDto filmDto) {
 
-        OrderDto orderDto = OrderDto
-                .builder()
+        OrderDto orderDto = OrderDto.builder()
+                .id(1L)
+                .lastUpdate(valueOf(now()))
                 .orderName(filmDto.getTitle())
                 .price(24.90)
                 .place(filmDto.getCinemaHall().getLocation())
@@ -44,7 +50,11 @@ public class FilmService {
                 .status("NEW")
                 .build();
 
+        log.info("Publishing info {} ", orderDto);
+
         orderClient.palaceOrder(orderDto);
+
+        log.info("Published info {} ", orderDto);
 
         return filmMapper.filmToFilmDto(filmRepository.save(filmMapper.filmDtoToFilm(filmDto)));
     }

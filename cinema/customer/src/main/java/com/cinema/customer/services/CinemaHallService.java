@@ -1,15 +1,18 @@
 package com.cinema.customer.services;
 
 
+import com.cinema.clients.customer.model.CityDto;
 import com.cinema.customer.repositories.CinemaHallRepository;
 import com.cinema.customer.web.controller.NotFoundException;
 import com.cinema.customer.web.mappers.CinemaHallMapper;
 import com.cinema.clients.customer.model.CinemaHallDto;
+import com.cinema.customer.web.mappers.CityMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.toList;
 
 @Service
 @RequiredArgsConstructor
@@ -17,10 +20,12 @@ public class CinemaHallService {
     private final CinemaHallRepository cinemaHallRepository;
     private final CinemaHallMapper cinemaHallMapper;
 
+    private final CityMapper cityMapper;
+
     public List<CinemaHallDto> getAllCinemaHalls() {
         return cinemaHallRepository.findAll().stream()
                 .map(cinemaHallMapper::cinemaHallToCinemaHallDto)
-                .collect(Collectors.toList());
+                .collect(toList());
     }
 
     public CinemaHallDto getCinemaHallById(Long hallId) {
@@ -54,6 +59,13 @@ public class CinemaHallService {
     }
 
     public CinemaHallDto getCinemaHallByLocation(String location) {
-        return cinemaHallRepository.findCinemaHallByLocation(location);
+        return cinemaHallMapper.cinemaHallToCinemaHallDto(cinemaHallRepository.findCinemaHallByLocation(location));
+    }
+
+    public List<CinemaHallDto> getCinemaHallsByCity(CityDto cityDto) {
+        return cinemaHallRepository.findCinemaHallByCity(cityMapper.cityDtoToCity(cityDto))
+                .stream()
+                .map(cinemaHallMapper::cinemaHallToCinemaHallDto)
+                .collect(toList());
     }
 }

@@ -2,10 +2,14 @@ package com.cinema.customer.web.mappers;
 
 import com.cinema.clients.customer.model.CinemaHallDto;
 import com.cinema.clients.customer.model.CinemaHallDto.CinemaHallDtoBuilder;
+import com.cinema.clients.customer.model.CityDto;
+import com.cinema.clients.customer.model.CityDto.CityDtoBuilder;
 import com.cinema.clients.customer.model.LayoutCapacityDto;
 import com.cinema.clients.customer.model.LayoutCapacityDto.LayoutCapacityDtoBuilder;
 import com.cinema.customer.domain.CinemaHall;
 import com.cinema.customer.domain.CinemaHall.CinemaHallBuilder;
+import com.cinema.customer.domain.City;
+import com.cinema.customer.domain.City.CityBuilder;
 import com.cinema.customer.domain.LayoutCapacity;
 import com.cinema.customer.domain.LayoutCapacity.LayoutCapacityBuilder;
 import java.util.ArrayList;
@@ -16,7 +20,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-02-02T12:20:08+0200",
+    date = "2023-03-25T15:58:02+0200",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.1 (Oracle Corporation)"
 )
 @Component
@@ -36,6 +40,7 @@ public class CinemaHallMapperImpl_ implements CinemaHallMapper {
         cinemaHallDto.name( cinemaHall.getName() );
         cinemaHallDto.location( cinemaHall.getLocation() );
         cinemaHallDto.capacities( layoutCapacityListToLayoutCapacityDtoList( cinemaHall.getCapacities() ) );
+        cinemaHallDto.city( cityToCityDto( cinemaHall.getCity() ) );
 
         return cinemaHallDto.build();
     }
@@ -53,6 +58,7 @@ public class CinemaHallMapperImpl_ implements CinemaHallMapper {
         cinemaHall.name( cinemaHallDto.getName() );
         cinemaHall.location( cinemaHallDto.getLocation() );
         cinemaHall.capacities( layoutCapacityDtoListToLayoutCapacityList( cinemaHallDto.getCapacities() ) );
+        cinemaHall.city( cityDtoToCity( cinemaHallDto.getCity() ) );
 
         return cinemaHall.build();
     }
@@ -85,6 +91,20 @@ public class CinemaHallMapperImpl_ implements CinemaHallMapper {
         return list1;
     }
 
+    protected CityDto cityToCityDto(City city) {
+        if ( city == null ) {
+            return null;
+        }
+
+        CityDtoBuilder cityDto = CityDto.builder();
+
+        cityDto.id( city.getId() );
+        cityDto.lastUpdate( city.getLastUpdate() );
+        cityDto.cityName( city.getCityName() );
+
+        return cityDto.build();
+    }
+
     protected LayoutCapacity layoutCapacityDtoToLayoutCapacity(LayoutCapacityDto layoutCapacityDto) {
         if ( layoutCapacityDto == null ) {
             return null;
@@ -111,5 +131,19 @@ public class CinemaHallMapperImpl_ implements CinemaHallMapper {
         }
 
         return list1;
+    }
+
+    protected City cityDtoToCity(CityDto cityDto) {
+        if ( cityDto == null ) {
+            return null;
+        }
+
+        CityBuilder city = City.builder();
+
+        city.id( cityDto.getId() );
+        city.lastUpdate( cityDto.getLastUpdate() );
+        city.cityName( cityDto.getCityName() );
+
+        return city.build();
     }
 }

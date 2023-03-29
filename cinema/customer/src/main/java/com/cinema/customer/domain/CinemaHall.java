@@ -2,10 +2,7 @@ package com.cinema.customer.domain;
 
 import lombok.*;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,16 +19,20 @@ public class CinemaHall extends BaseEntity {
                       String name,
                       String location,
                       List<LayoutCapacity> capacities,
-                      boolean isBooked) {
+                      boolean isBooked,
+                      City city) {
         super(id, lastUpdate);
         this.name = name;
         this.location = location;
         this.capacities = capacities;
         this.isBooked = isBooked;
+        this.city = city;
     }
     private String name;
     private String location;
-    private boolean isBooked = false;
+    private boolean isBooked;
+    @ManyToOne
+    private City city;
     @OneToMany(cascade = {CascadeType.ALL})
     private List<LayoutCapacity> capacities;
     public void setCapacity(LayoutCapacity capacity) {

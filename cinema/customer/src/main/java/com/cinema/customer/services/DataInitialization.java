@@ -1,14 +1,8 @@
 package com.cinema.customer.services;
 
 
-import com.cinema.customer.domain.CinemaHall;
-import com.cinema.customer.domain.Film;
-import com.cinema.customer.domain.LayoutCapacity;
-import com.cinema.customer.domain.User;
-import com.cinema.customer.repositories.CinemaHallRepository;
-import com.cinema.customer.repositories.FilmRepository;
-import com.cinema.customer.repositories.LayoutCapacityRepository;
-import com.cinema.customer.repositories.UserRepository;
+import com.cinema.customer.domain.*;
+import com.cinema.customer.repositories.*;
 import com.cinema.clients.customer.model.Layout;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
@@ -17,6 +11,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static java.util.List.of;
 
 @Service
 public class DataInitialization {
@@ -31,6 +27,9 @@ public class DataInitialization {
     FilmRepository filmRepository;
 
     @Autowired
+    CityRepository cityRepository;
+
+    @Autowired
     LayoutCapacityRepository layoutCapacityRepository;
 
     @EventListener(ApplicationReadyEvent.class)
@@ -39,10 +38,24 @@ public class DataInitialization {
         //TODO add cinema halls type
 
         if (halls.size() == 0) {
+
+            City odessa = City.builder()
+                    .cityName("Odessa")
+                    .build();
+
+            City kharkiv = City.builder()
+                    .cityName("Kharkov")
+                    .build();
+
+
+            cityRepository.saveAll(of(odessa, kharkiv));
+
             CinemaHall center_cinema_hall = CinemaHall.builder()
                     .capacities(new ArrayList<>())
                     .name("Center cinema hall")
-                    .location("Main hall").build();
+                    .location("Main hall")
+                    .city(odessa)
+                    .build();
             center_cinema_hall.setCapacity(LayoutCapacity.builder().capacity(15).layout(Layout.THEATER).build());
             center_cinema_hall.setCapacity(LayoutCapacity.builder().capacity(15).layout(Layout.USHAPE).build());
             cinemaHallRepository.save(center_cinema_hall);
@@ -50,7 +63,10 @@ public class DataInitialization {
             CinemaHall rodina = CinemaHall.builder()
                     .capacities(new ArrayList<>())
                     .name("Rodina")
-                    .location("2nd Floor").build();
+                    .location("2nd Floor")
+                    .city(odessa)
+                    .build();
+
             rodina.setCapacity(LayoutCapacity.builder().capacity(10).layout(Layout.BOARD).build());
             rodina.setCapacity(LayoutCapacity.builder().capacity(15).layout(Layout.USHAPE).build());
             cinemaHallRepository.save(rodina);
@@ -58,7 +74,9 @@ public class DataInitialization {
             CinemaHall moskva = CinemaHall.builder()
                     .capacities(new ArrayList<>())
                     .name("Moskva")
-                    .location("1st Floor").build();
+                    .location("1st Floor")
+                    .city(kharkiv)
+                    .build();
             moskva.setCapacity(LayoutCapacity.builder().capacity(15).layout(Layout.THEATER).build());
             moskva.setCapacity(LayoutCapacity.builder().capacity(15).layout(Layout.USHAPE).build());
             cinemaHallRepository.save(moskva);

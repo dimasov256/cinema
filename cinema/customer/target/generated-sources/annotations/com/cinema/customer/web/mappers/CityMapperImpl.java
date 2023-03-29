@@ -11,5 +11,5 @@ import org.springframework.stereotype.Component;
 )
 @Component
 @Primary
-public class UserMapperImpl extends UserMapperDecorator implements UserMapper {
+public class CityMapperImpl extends CItyMapperDecorator implements CityMapper {
 }
