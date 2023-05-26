@@ -3,6 +3,7 @@ package com.cinema.customer.services;
 
 import com.cinema.clients.customer.model.CityDto;
 import com.cinema.customer.repositories.CinemaHallRepository;
+import com.cinema.customer.repositories.CityRepository;
 import com.cinema.customer.web.controller.NotFoundException;
 import com.cinema.customer.web.mappers.CinemaHallMapper;
 import com.cinema.clients.customer.model.CinemaHallDto;
@@ -19,8 +20,9 @@ import static java.util.stream.Collectors.toList;
 public class CinemaHallService {
     private final CinemaHallRepository cinemaHallRepository;
     private final CinemaHallMapper cinemaHallMapper;
-
+    private final CityRepository cityRepository;
     private final CityMapper cityMapper;
+
 
     public List<CinemaHallDto> getAllCinemaHalls() {
         return cinemaHallRepository.findAll().stream()
@@ -62,8 +64,9 @@ public class CinemaHallService {
         return cinemaHallMapper.cinemaHallToCinemaHallDto(cinemaHallRepository.findCinemaHallByLocation(location));
     }
 
-    public List<CinemaHallDto> getCinemaHallsByCity(CityDto cityDto) {
-        return cinemaHallRepository.findCinemaHallByCity(cityMapper.cityDtoToCity(cityDto))
+    public List<CinemaHallDto> getCinemaHallsByCity(String name) {
+        CityDto city = cityMapper.cityToCityDto(cityRepository.findCityByCityName(name));
+        return cinemaHallRepository.findCinemaHallByCity(cityMapper.cityDtoToCity(city))
                 .stream()
                 .map(cinemaHallMapper::cinemaHallToCinemaHallDto)
                 .collect(toList());

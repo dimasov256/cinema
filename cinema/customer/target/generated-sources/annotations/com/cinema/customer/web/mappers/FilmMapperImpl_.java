@@ -21,6 +21,7 @@ import com.cinema.customer.domain.LayoutCapacity.LayoutCapacityBuilder;
 import com.cinema.customer.domain.User;
 import com.cinema.customer.domain.User.UserBuilder;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import javax.annotation.processing.Generated;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -28,7 +29,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-03-25T15:58:02+0200",
+    date = "2023-05-24T04:26:58+0300",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.1 (Oracle Corporation)"
 )
 @Component
@@ -150,6 +151,10 @@ public class FilmMapperImpl_ implements FilmMapper {
         userDto.name( user.getName() );
         userDto.password( user.getPassword() );
         userDto.email( user.getEmail() );
+        byte[] picByte = user.getPicByte();
+        if ( picByte != null ) {
+            userDto.picByte( Arrays.copyOf( picByte, picByte.length ) );
+        }
         userDto.amountAvailable( user.getAmountAvailable() );
         userDto.amountReserved( user.getAmountReserved() );
 
@@ -227,6 +232,10 @@ public class FilmMapperImpl_ implements FilmMapper {
         user.name( userDto.getName() );
         user.password( userDto.getPassword() );
         user.email( userDto.getEmail() );
+        byte[] picByte = userDto.getPicByte();
+        if ( picByte != null ) {
+            user.picByte( Arrays.copyOf( picByte, picByte.length ) );
+        }
         user.amountAvailable( userDto.getAmountAvailable() );
         user.amountReserved( userDto.getAmountReserved() );
 

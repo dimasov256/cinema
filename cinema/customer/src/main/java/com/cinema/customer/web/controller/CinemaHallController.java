@@ -21,7 +21,8 @@ public class CinemaHallController {
     private final CinemaHallService cinemaHallService;
 
     @GetMapping("/cinemaHalls")
-    public ResponseEntity<List<CinemaHallDto>> getAllCinemaHalls() throws InterruptedException {
+    public ResponseEntity<List<CinemaHallDto>> getAllCinemaHalls(@CookieValue(value = "token", defaultValue = "empty") String token) {
+        System.out.println("Cookies: " + token);
         return new ResponseEntity<>(cinemaHallService.getAllCinemaHalls(), HttpStatus.OK);
     }
 
@@ -47,12 +48,12 @@ public class CinemaHallController {
     }
 
     @DeleteMapping("/cinemaHalls/{hallId}")
-    public void deleteCinemaHall(@PathVariable() Long hallId) {
+    public void deleteCinemaHall(@PathVariable("hallId") Long hallId) {
         cinemaHallService.deleteCinemaHall(hallId);
     }
 
-    @GetMapping("/cinemaHalls/city")
-    public ResponseEntity<List<CinemaHallDto>> getCinemaHallsByCity(@RequestBody CityDto city) {
-        return new ResponseEntity<>(cinemaHallService.getCinemaHallsByCity(city), HttpStatus.OK);
+    @GetMapping("/cinemaHalls/city/{name}")
+    public ResponseEntity<List<CinemaHallDto>> getCinemaHallsByCity(@PathVariable("name")String name ) {
+        return new ResponseEntity<>(cinemaHallService.getCinemaHallsByCity(name), HttpStatus.OK);
     }
 }

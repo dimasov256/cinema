@@ -12,6 +12,7 @@ C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\custo
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\domain\CinemaHall.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\repositories\UserRepository.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\web\mappers\CItyMapperDecorator.java
+C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\repositories\criteria\UserSearchDao.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\configuration\ConfigurationBeans.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\repositories\FilmRepository.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\services\UserService.java
@@ -25,8 +26,10 @@ C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\custo
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\web\controller\FilmController.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\web\mappers\UserMapper.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\web\mappers\CinemaHallMapper.java
+C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\services\pagenation\UserPageList.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\web\controller\ValidateUserController.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\repositories\LayoutCapacityRepository.java
+C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\repositories\criteria\SearchRequest.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\services\DataInitialization.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\domain\User.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\web\mappers\LayoutCapacityMapper.java
@@ -35,6 +38,7 @@ C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\custo
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\repositories\CinemaHallRepository.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\services\CinemaHallService.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\domain\BaseEntity.java
+C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\domain\http\HttpResponse.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\repositories\CityRepository.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\services\CityService.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\customer\src\main\java\com\cinema\customer\domain\City.java

@@ -17,7 +17,7 @@ public class CORSConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                .allowedHeaders("*")
+//                .allowedHeaders("*")
                 .allowedOrigins("http://localhost:4200")
                 .allowCredentials(true);
         //TODO: Need to change the URL for the production URL when we deploy

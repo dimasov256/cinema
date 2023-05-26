@@ -20,6 +20,7 @@ com\cinema\customer\web\mappers\UserMapperImpl.class
 com\cinema\customer\services\CityService.class
 com\cinema\customer\web\mappers\FilmMapper.class
 com\cinema\customer\repositories\LayoutCapacityRepository.class
+com\cinema\customer\domain\http\HttpResponse$HttpResponseBuilder.class
 com\cinema\customer\web\controller\CityController.class
 com\cinema\customer\web\controller\NotFoundException.class
 com\cinema\customer\web\controller\FilmController.class
@@ -32,10 +33,13 @@ com\cinema\customer\repositories\CinemaHallRepository.class
 com\cinema\customer\services\LayoutCapacityService.class
 com\cinema\customer\web\mappers\FilmMapperImpl.class
 com\cinema\customer\web\mappers\UserMapper.class
+com\cinema\customer\repositories\criteria\UserSearchDao.class
+com\cinema\customer\domain\http\HttpResponse$HttpResponseBuilderImpl.class
 com\cinema\customer\domain\User$UserBuilder.class
 com\cinema\customer\repositories\CityRepository.class
 com\cinema\customer\web\mappers\LayoutCapacityMapper.class
 com\cinema\customer\configuration\ConfigurationBeans.class
+com\cinema\customer\services\pagenation\UserPageList.class
 com\cinema\customer\web\mappers\UserMapperDecorator.class
 com\cinema\customer\web\mappers\LayoutCapacityMapperImpl.class
 com\cinema\customer\domain\City$CityBuilder.class
@@ -48,8 +52,11 @@ com\cinema\customer\web\mappers\LayoutCapacityMapperImpl_.class
 com\cinema\customer\domain\CinemaHall$CinemaHallBuilder.class
 com\cinema\customer\web\mappers\CItyMapperDecorator.class
 com\cinema\customer\config\RestSecurityConfig.class
+com\cinema\customer\domain\http\HttpResponse.class
 com\cinema\customer\services\FilmService.class
+com\cinema\customer\config\JWTAuthFilter$1.class
 com\cinema\customer\CustomerApplication.class
 com\cinema\customer\domain\City.class
 com\cinema\customer\domain\LayoutCapacity.class
+com\cinema\customer\repositories\criteria\SearchRequest.class
 com\cinema\customer\web\controller\UserController.class

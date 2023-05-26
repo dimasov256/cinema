@@ -4,13 +4,14 @@ import com.cinema.clients.customer.model.UserDto;
 import com.cinema.clients.customer.model.UserDto.UserDtoBuilder;
 import com.cinema.customer.domain.User;
 import com.cinema.customer.domain.User.UserBuilder;
+import java.util.Arrays;
 import javax.annotation.processing.Generated;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-03-25T15:58:02+0200",
+    date = "2023-05-24T04:26:58+0300",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.1 (Oracle Corporation)"
 )
 @Component
@@ -30,6 +31,10 @@ public class UserMapperImpl_ implements UserMapper {
         userDto.name( user.getName() );
         userDto.password( user.getPassword() );
         userDto.email( user.getEmail() );
+        byte[] picByte = user.getPicByte();
+        if ( picByte != null ) {
+            userDto.picByte( Arrays.copyOf( picByte, picByte.length ) );
+        }
         userDto.amountAvailable( user.getAmountAvailable() );
         userDto.amountReserved( user.getAmountReserved() );
 
@@ -37,7 +42,7 @@ public class UserMapperImpl_ implements UserMapper {
     }
 
     @Override
-    public User userDtoTouSer(UserDto userDto) {
+    public User userDtoToUser(UserDto userDto) {
         if ( userDto == null ) {
             return null;
         }
@@ -49,6 +54,10 @@ public class UserMapperImpl_ implements UserMapper {
         user.name( userDto.getName() );
         user.password( userDto.getPassword() );
         user.email( userDto.getEmail() );
+        byte[] picByte = userDto.getPicByte();
+        if ( picByte != null ) {
+            user.picByte( Arrays.copyOf( picByte, picByte.length ) );
+        }
         user.amountAvailable( userDto.getAmountAvailable() );
         user.amountReserved( userDto.getAmountReserved() );
 

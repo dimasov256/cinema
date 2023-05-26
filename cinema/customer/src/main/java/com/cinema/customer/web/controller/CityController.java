@@ -22,5 +22,4 @@ public class CityController {
     public ResponseEntity<List<CityDto>> getAllCities() {
         return new ResponseEntity<>(cityService.getAllCities(), HttpStatus.OK);
     }
-
 }

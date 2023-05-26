@@ -47,7 +47,6 @@ public class DataInitialization {
                     .cityName("Kharkov")
                     .build();
 
-
             cityRepository.saveAll(of(odessa, kharkiv));
 
             CinemaHall center_cinema_hall = CinemaHall.builder()
@@ -81,14 +80,32 @@ public class DataInitialization {
             moskva.setCapacity(LayoutCapacity.builder().capacity(15).layout(Layout.USHAPE).build());
             cinemaHallRepository.save(moskva);
 
-            User user = User.builder()
+            User matt = User.builder()
                     .name("matt")
                     .password("secret")
-                    .email("some@email.com")
+                    .email("matt@email.com")
                     .amountReserved(156.5)
                     .amountAvailable(406.0)
                     .build();
-            userRepository.save(user);
+            userRepository.save(matt);
+
+            User diana = User.builder()
+                    .name("diana")
+                    .password("secret")
+                    .email("diana@email.com")
+                    .amountReserved(178.0)
+                    .amountAvailable(406.0)
+                    .build();
+            userRepository.save(diana);
+
+            User kristin = User.builder()
+                    .name("kristin")
+                    .password("secret")
+                    .email("kristin@email.com")
+                    .amountReserved(9987.0)
+                    .amountAvailable(547.0)
+                    .build();
+            userRepository.save(kristin);
 
 
             Film kill_bill = new Film();
@@ -99,7 +116,7 @@ public class DataInitialization {
             kill_bill.setParticipants(8);
             kill_bill.setTitle("Kill Bill");
             kill_bill.setCinemaHall(center_cinema_hall);
-            kill_bill.setUser(user);
+            kill_bill.setUser(diana);
             filmRepository.save(kill_bill);
 
             Film godzilla = new Film();
@@ -110,7 +127,7 @@ public class DataInitialization {
             godzilla.setParticipants(5);
             godzilla.setTitle("Godzilla");
             godzilla.setCinemaHall(rodina);
-            godzilla.setUser(user);
+            godzilla.setUser(diana);
             filmRepository.save(godzilla);
         }
     }
