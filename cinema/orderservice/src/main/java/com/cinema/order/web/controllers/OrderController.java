@@ -1,38 +1,46 @@
 package com.cinema.order.web.controllers;
 
-//import com.cinema.models.order.Order;
-//import com.cinema.models.order.OrderEvent;
 import com.cinema.clients.order.OrderDto;
 import com.cinema.clients.order.OrderEventDto;
+import com.cinema.order.domain.Order;
+import com.cinema.order.domain.OrderEvent;
+import com.cinema.order.services.OrderEventService;
+import com.cinema.order.services.OrderService;
+import com.cinema.order.services.criteria.OrderSearchDao;
 import com.cinema.order.services.kafka.OrderProducer;
+import com.cinema.order.web.mappers.OrderEventMapper;
+import com.cinema.order.web.mappers.OrderMapper;
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1")
+@AllArgsConstructor
 public class OrderController {
 
-    private final OrderProducer orderProducer;
+    private final OrderEventService orderEventService;
+    private final OrderService orderService;
 
-    @Autowired
-    public OrderController(OrderProducer orderProducer) {
-        this.orderProducer = orderProducer;
-    }
+    private final OrderSearchDao orderSearchDao;
 
     @PostMapping("/orders")
-    public String palaceOrder(@RequestBody OrderDto orderDto) {
+    public OrderEventDto palaceOrder(@RequestBody OrderDto orderDto) {
+        return orderEventService.palaceOrder(orderDto);
+    }
 
-        OrderEventDto orderEventDto = new OrderEventDto();
-        orderEventDto.setStatus("PENDING");
-        orderEventDto.setMessage("Order status is in pending status");
-        orderEventDto.setOrderDto(orderDto);
+    @GetMapping("/allOrders")
+    public ResponseEntity<List<OrderDto>> getAllOrders() {
+        return new ResponseEntity<>(orderService.findAllOrders(), HttpStatus.OK);
+    }
 
-        orderProducer.sendMessage(orderEventDto);
-        //TODO: save event to DB
-
-        return "Order placed successfully...";
+    @GetMapping("/orders/{orderName}")
+    public ResponseEntity<List<Order>> getByName(@PathVariable("orderName") String orderName) {
+        return new ResponseEntity<>(orderSearchDao.findAllOrdersByName(orderName), HttpStatus.OK);
     }
 }

@@ -8,5 +8,5 @@ import org.springframework.web.bind.annotation.RequestBody;
 public interface OrderClient {
 
     @PostMapping("/orders")
-    String palaceOrder(@RequestBody OrderDto orderDto);
+    OrderEventDto palaceOrder(@RequestBody OrderDto orderDto);
 }

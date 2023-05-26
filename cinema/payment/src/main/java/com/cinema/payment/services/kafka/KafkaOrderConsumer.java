@@ -14,15 +14,14 @@ import org.springframework.stereotype.Service;
 public class KafkaOrderConsumer {
     private static final Logger LOGGER = LoggerFactory.getLogger(KafkaOrderConsumer.class);
     private final OrderManageService orderManageService;
-
     @Autowired
     public KafkaOrderConsumer(OrderManageService orderManageService) {
         this.orderManageService = orderManageService;
     }
-
-    @KafkaListener(id = "order", topics = "order-topic", groupId = "payment")
+    @KafkaListener(id = "order", topics = "payment-topic", groupId = "payment")
     public void onEvent(OrderEventDto orderEventDto) {
-        LOGGER.info(String.format("Received: {}", orderEventDto));
+        LOGGER.info("Received: " + orderEventDto.toString());
+
         if(orderEventDto.getStatus().equals("NEW")) {
             orderManageService.reserve(orderEventDto);
         } else {

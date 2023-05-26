@@ -15,17 +15,21 @@ public class CinemaHallDto extends BaseItem {
                          String name,
                          String location,
                          List<LayoutCapacityDto> capacities,
-                         boolean isBooked) {
+                         boolean isBooked,
+                         CityDto city) {
         super(id, lastUpdate);
         this.name = name;
         this.location = location;
         this.capacities = capacities;
         this.isBooked = isBooked;
+        this.city = city;
     }
+
     private String name;
     private String location;
-    boolean isBooked = false;
+    private boolean isBooked;
     private List<LayoutCapacityDto> capacities;
+    private CityDto city;
     public void setCapacity(LayoutCapacityDto capacity) {
         for (LayoutCapacityDto lc : this.capacities) {
             if (lc.getLayout() == capacity.getLayout()) {
@@ -33,17 +37,4 @@ public class CinemaHallDto extends BaseItem {
             }
         }
     }
-
-    public boolean isBooked() {
-        return this.isBooked;
-    }
-
-    public void setBooked(boolean isBooked) {
-        this.isBooked = isBooked;
-    }
-
-    protected boolean canEqual(final Object other) {
-        return other instanceof CinemaHallDto;
-    }
-
 }

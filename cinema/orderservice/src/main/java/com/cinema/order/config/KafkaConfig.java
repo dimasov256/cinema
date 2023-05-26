@@ -20,13 +20,15 @@ import org.springframework.kafka.support.serializer.JsonSerde;
 
 import java.time.Duration;
 
+import static java.lang.String.format;
+
 @Configuration
 public class KafkaConfig {
 
-    private static final Logger LOG = LoggerFactory.getLogger(KafkaConfig.class);
-
     @Autowired
     OrderManageService orderManageService;
+
+    private static final Logger LOG = LoggerFactory.getLogger(KafkaConfig.class);
 
     @Value("${spring.kafka.topic.name}")
     private String topicName;
@@ -39,6 +41,7 @@ public class KafkaConfig {
 
     @Bean
     public NewTopic topic() {
+        LOG.info("Created topic: {}" + topicName);
         return TopicBuilder
                 .name(topicName)
                 .build();
@@ -46,6 +49,7 @@ public class KafkaConfig {
 
     @Bean
     public NewTopic paymentOrderTopic() {
+        LOG.info("Created topic: {}" + paymentOrder);
         return TopicBuilder
                 .name(paymentOrder)
                 .build();
@@ -53,9 +57,9 @@ public class KafkaConfig {
 
     @Bean
     public NewTopic stockTopic() {
+        LOG.info("Created topic: {}" + stockTopic);
         return TopicBuilder
                 .name(stockTopic)
                 .build();
     }
-
 }

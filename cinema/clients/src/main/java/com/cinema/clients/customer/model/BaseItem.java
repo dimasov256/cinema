@@ -10,8 +10,6 @@ import java.sql.Timestamp;
 @NoArgsConstructor
 @AllArgsConstructor
 public class BaseItem {
-
     private Long id;
-
     private Timestamp lastUpdate;
 }

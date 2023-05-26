@@ -2,6 +2,7 @@ package com.cinema.clients.customer.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 @AllArgsConstructor

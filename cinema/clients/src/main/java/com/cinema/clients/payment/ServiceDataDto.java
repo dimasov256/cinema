@@ -1,12 +1,11 @@
 package com.cinema.clients.payment;
 
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.sql.Timestamp;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 public class ServiceDataDto extends BaseItem{
 

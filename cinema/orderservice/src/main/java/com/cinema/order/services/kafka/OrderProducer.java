@@ -1,54 +1,40 @@
 package com.cinema.order.services.kafka;
 
 import com.cinema.clients.order.OrderEventDto;
-import com.cinema.order.services.OrderEventService;
 import com.cinema.order.services.OrderManageService;
-import com.cinema.order.web.mappers.OrderEventMapper;
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.admin.NewTopic;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.kafka.support.KafkaHeaders;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
 
+import static java.lang.String.format;
+import static org.slf4j.LoggerFactory.getLogger;
+import static org.springframework.kafka.support.KafkaHeaders.*;
 
+@Slf4j
 @Service
+@AllArgsConstructor
 public class OrderProducer {
-    private static final Logger LOGGER = LoggerFactory.getLogger(OrderProducer.class);
+    private static final Logger LOGGER = getLogger(OrderProducer.class);
     private NewTopic topic;
-    private KafkaTemplate<String, OrderEventDto> kafkaTemplate;
-    private final OrderManageService orderManageService;
-    private final OrderEventMapper orderEventMapper;
-
-    private final OrderEventService orderEventService;
-
-    @Autowired
-    public OrderProducer(NewTopic topic,
-                         KafkaTemplate<String, OrderEventDto> kafkaTemplate,
-                         OrderManageService orderManageService,
-                         OrderEventMapper orderEventMapper,
-                         OrderEventService orderEventService) {
-        this.topic = topic;
-        this.kafkaTemplate = kafkaTemplate;
-        this.orderManageService = orderManageService;
-        this.orderEventMapper = orderEventMapper;
-        this.orderEventService = orderEventService;
-    }
+    private KafkaTemplate<Long, OrderEventDto> kafkaTemplate;
+    private OrderManageService orderManageService;
 
     public void sendMessage(OrderEventDto orderEventDto) {
-        LOGGER.info(String.format("Order event: %s", orderEventDto.toString()));
 
-        //create message
+        LOGGER.info(format("Order event: %s", orderEventDto));
+
         Message<OrderEventDto> message = MessageBuilder
                 .withPayload(orderEventDto)
-                .setHeader(KafkaHeaders.TOPIC, topic.name())
+                .setHeader(TOPIC, topic.name())
                 .build();
 
-        orderEventService.saveOrderEvent(orderEventDto);
-
         kafkaTemplate.send(message);
+
+        log.info("Sent message with event: {}", orderEventDto);
     }
 }

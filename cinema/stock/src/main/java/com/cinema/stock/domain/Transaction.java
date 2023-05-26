@@ -13,7 +13,7 @@ import java.sql.Timestamp;
 @Entity
 @Table(name = "transaction")
 @NoArgsConstructor
-public class Transaction extends BaseEntity{
+public class Transaction extends BaseEntity {
 
     @Builder
     public Transaction(Long id,

@@ -1,17 +1,18 @@
 package com.cinema.clients.order;
 
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.sql.Timestamp;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
-public class OrderProductDto extends BaseItem{
+public class OrderProductDto extends BaseItem {
 
     @Builder
-    public OrderProductDto(Long id, Timestamp lastUpdate, OrderDto order) {
+    public OrderProductDto(Long id,
+                           Timestamp lastUpdate,
+                           OrderDto order) {
         super(id, lastUpdate);
         this.order = order;
     }

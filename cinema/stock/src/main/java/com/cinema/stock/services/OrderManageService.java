@@ -3,7 +3,6 @@ package com.cinema.stock.services;
 import com.cinema.clients.customer.cinemahall.CinemaHallClient;
 import com.cinema.clients.customer.model.CinemaHallDto;
 import com.cinema.clients.order.OrderEventDto;
-import com.cinema.stock.domain.Transaction;
 import com.cinema.stock.repositories.TransactionRepository;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
@@ -22,16 +21,22 @@ public class OrderManageService {
     private final CinemaHallClient cinemaHallClient;
 
     public void reserve(OrderEventDto orderEventDto) {
-        Transaction transaction = transactionRepository.getById(1L);
-        CinemaHallDto cinemaHall = cinemaHallClient.getCinemaHallByLocation(orderEventDto.getOrderDto().getPlace());
-        LOGGER.info(String.format("Found: %s", transaction));
 
-        if (orderEventDto.getOrderDto().getStatus().equals("NEW")) {
-            if (cinemaHall.isBooked()) {
-                orderEventDto.getOrderDto().setStatus("ACCEPTED");
-                transactionRepository.save(transaction);
+        //TODO: write a transaction entity
+//        Transaction transaction = transactionRepository.findById(1L).orElseThrow(() -> new RuntimeException("Transaction is not exist"));
+
+        CinemaHallDto cinemaHall = cinemaHallClient.getCinemaHallByLocation(orderEventDto.getOrder().getPlace());
+
+//        LOGGER.info(String.format("Found: %s", transaction));
+
+        if (orderEventDto.getOrder().getStatus().equals("NEW")) {
+            if (!cinemaHall.isBooked()) {
+                orderEventDto.getOrder().setStatus("ACCEPTED");
+                cinemaHall.setBooked(true);
+                cinemaHallClient.updateCinemaHall(cinemaHall.getId(), cinemaHall);
+//                transactionRepository.save(transaction);
             }  else {
-                orderEventDto.getOrderDto().setStatus("REJECTED");
+                orderEventDto.getOrder().setStatus("REJECTED");
             }
             template.send("stock-topic", orderEventDto.getId(), orderEventDto);
         }

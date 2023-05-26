@@ -20,8 +20,8 @@
         <module name="base-domains" />
         <module name="apigw" />
         <module name="clients" />
-        <module name="fraud" />
         <module name="amqp" />
+        <module name="fraud" />
         <module name="payment" />
         <module name="stock" />
         <module name="eureka-server" />
@@ -42,7 +42,7 @@
       <module name="amqp" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="apigw" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="base-domains" options="-Amapstruct.defaultComponentModel=spring" />
-      <module name="cinema" options="" />
+      <module name="cinema" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="cinema-service" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="clients" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="customer" options="-Amapstruct.defaultComponentModel=spring" />

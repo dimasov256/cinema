@@ -11,12 +11,14 @@ import java.sql.Timestamp;
 public class LayoutCapacityDto extends BaseItem {
 
     @Builder
-    public LayoutCapacityDto(Long id, Timestamp lastUpdate, Layout layout, Integer capacity) {
+    public LayoutCapacityDto(Long id,
+                             Timestamp lastUpdate,
+                             Layout layout,
+                             Integer capacity) {
         super(id, lastUpdate);
         this.layout = layout;
         this.capacity = capacity;
     }
-
     private Layout layout;
     private Integer capacity;
 }

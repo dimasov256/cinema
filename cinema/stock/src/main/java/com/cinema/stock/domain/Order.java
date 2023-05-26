@@ -1,13 +1,17 @@
 package com.cinema.stock.domain;
 
 import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.sql.Timestamp;
 
+@Data
 @Entity
 @Table(name = "order_table")
+@NoArgsConstructor
 public class Order extends BaseEntity{
 
     @Builder

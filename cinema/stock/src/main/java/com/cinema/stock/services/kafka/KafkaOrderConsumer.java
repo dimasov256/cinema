@@ -18,10 +18,9 @@ public class KafkaOrderConsumer {
 
     @KafkaListener(id = "order", topics = "order-topic", groupId = "payment")
     public void onEvent(OrderEventDto orderEventDto) {
-        LOGGER.info(String.format("Receiver: {}", orderEventDto));
-        if (orderEventDto.getOrderDto().getStatus().equals("NEW")) {
+        LOGGER.info(String.format("Receive: %s", orderEventDto));
+        if (orderEventDto.getOrder().getStatus().equals("NEW")) {
             orderManageService.reserve(orderEventDto);
-
         } else {
             System.out.println("Else");
         }

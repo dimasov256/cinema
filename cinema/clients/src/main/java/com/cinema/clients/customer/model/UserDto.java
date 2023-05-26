@@ -15,12 +15,14 @@ public class UserDto extends BaseItem {
                    Timestamp lastUpdate,
                    String name, String password,
                    String email,
+                   byte[] picByte,
                    Double amountAvailable,
                    Double amountReserved) {
         super(id, lastUpdate);
         this.name = name;
         this.password = password;
         this.email = email;
+        this.picByte = picByte;
         this.amountAvailable = amountAvailable;
         this.amountReserved = amountReserved;
     }
@@ -28,6 +30,7 @@ public class UserDto extends BaseItem {
     private String name;
     private String password;
     private String email;
+    private byte[] picByte;
     private Double amountAvailable;
     private Double amountReserved;
 }

@@ -1,8 +1,6 @@
 package com.cinema.clients.order;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.sql.Timestamp;
 
@@ -14,4 +12,5 @@ public class BaseItem {
     private Long id;
 
     private Timestamp lastUpdate;
+
 }

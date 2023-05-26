@@ -33,17 +33,23 @@ spring:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
         format_sql: true
     show-sql: true
+  zipkin:
+    base-url: http://localhost:9411
 
-spring.output.ansi.enabled: ALWAYS
-spring.kafka.producer.bootstrap-server: localhost:9092
-spring.kafka.producer.key-serializer: org.apache.kafka.common.serialization.StringSerializer
-spring.kafka.producer.value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+spring.kafka:
+  bootstrap-servers: localhost:9092
+  producer:
+    key-serializer: org.apache.kafka.common.serialization.LongSerializer
+    value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+  streams:
+    properties:
+      default.key.serde: org.apache.kafka.common.serialization.Serdes$LongSerde
+      default.value.serde: org.springframework.kafka.support.serializer.JsonSerde
 
 spring.kafka.topic.name: order-topic
-spring.kafka.topic.payment-order: payment_order
+spring.kafka.topic.payment-order: payment-topic
 spring.kafka.topic.stock: stock-topic
 
-
-
+spring.output.ansi.enabled: ALWAYS
 
 logging.pattern.console:  "%clr(%d{HH:mm:ss.SSS}){blue} %clr(---){faint} %clr([%15.15t]){yellow} %clr(:){red} %clr(%m){faint}%n"
