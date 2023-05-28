@@ -1,0 +1,13 @@
+com\cinema\notification\domain\Notification.class
+com\cinema\notification\web\controllers\NotificationController.class
+com\cinema\notification\rabbitmq\NotificationCustomer.class
+com\cinema\notification\repositories\NotificationRepository.class
+com\cinema\notification\NotificationApp.class
+com\cinema\notification\web\mappers\NotificationMapperImpl.class
+com\cinema\notification\domain\BaseEntity.class
+com\cinema\notification\domain\Notification$NotificationBuilder.class
+com\cinema\notification\web\mappers\NotificationMapperDecorator.class
+com\cinema\notification\web\mappers\NotificationMapper.class
+com\cinema\notification\services\NotificationService.class
+com\cinema\notification\web\mappers\NotificationMapperImpl_.class
+com\cinema\notification\configuration\NotificationConfig.class

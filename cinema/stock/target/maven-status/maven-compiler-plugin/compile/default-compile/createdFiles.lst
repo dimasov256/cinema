@@ -1,0 +1,12 @@
+com\cinema\stock\services\OrderManageService.class
+com\cinema\stock\services\kafka\KafkaOrderConsumer.class
+com\cinema\stock\services\CinemaHallService.class
+com\cinema\stock\repositories\TransactionRepository.class
+com\cinema\stock\domain\Transaction$TransactionBuilder.class
+com\cinema\stock\domain\BaseEntity.class
+com\cinema\stock\domain\Order.class
+com\cinema\stock\services\Datainitializer.class
+com\cinema\stock\StockApplication.class
+com\cinema\stock\domain\Transaction.class
+com\cinema\stock\domain\Order$OrderBuilder.class
+com\cinema\stock\services\TransactionService.class

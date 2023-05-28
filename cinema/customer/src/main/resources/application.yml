@@ -22,6 +22,8 @@ spring:
     addresses: localhost:5672
 
 
+
+
 eureka:
   client:
     service-url:

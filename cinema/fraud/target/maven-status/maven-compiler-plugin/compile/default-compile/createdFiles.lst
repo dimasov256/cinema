@@ -1,0 +1,14 @@
+com\cinema\fraud\FraudServiceApplication.class
+com\cinema\fraud\web\controllers\FraudController.class
+com\cinema\fraud\web\mappers\FraudMapper.class
+com\cinema\fraud\web\models\BaseItem.class
+com\cinema\fraud\web\models\FraudDto$FraudDtoBuilder.class
+com\cinema\fraud\repository\FraudRepository.class
+com\cinema\fraud\domain\BaseEntity.class
+com\cinema\fraud\domain\Fraud$FraudBuilder.class
+com\cinema\fraud\web\mappers\FraudMapperImpl.class
+com\cinema\fraud\domain\Fraud.class
+com\cinema\fraud\web\mappers\FraudMappedDecorator.class
+com\cinema\fraud\web\mappers\FraudMapperImpl_.class
+com\cinema\fraud\services\FraudService.class
+com\cinema\fraud\web\models\FraudDto.class

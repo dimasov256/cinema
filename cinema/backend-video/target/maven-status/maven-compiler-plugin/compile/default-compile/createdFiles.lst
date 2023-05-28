@@ -1,0 +1,5 @@
+com\cinema\backendvideo\model\Video.class
+com\cinema\backendvideo\model\BaseEntity.class
+com\cinema\backendvideo\model\Comment.class
+com\cinema\backendvideo\BackendVideoApplication.class
+com\cinema\backendvideo\model\VideoStatus.class

@@ -1,0 +1,11 @@
+com\cinema\email\services\impl\EmailSenderServiceImpl.class
+com\cinema\email\config\KafkaProperties.class
+com\cinema\email\domain\EmailContent$EmailContentBuilder.class
+com\cinema\email\EmailApplication.class
+com\cinema\email\services\EmailSenderService.class
+com\cinema\email\kafka\OrderConsumer.class
+com\cinema\email\resource\EmailMessage.class
+com\cinema\email\domain\BaseEntity.class
+com\cinema\email\repository\EmailContentRepository.class
+com\cinema\email\web\controller\EmailSenderController.class
+com\cinema\email\domain\EmailContent.class

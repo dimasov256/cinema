@@ -1,0 +1,10 @@
+C:\Users\Brux\IdeaProjects\cinema\cinema\email\src\main\java\com\cinema\email\repository\EmailContentRepository.java
+C:\Users\Brux\IdeaProjects\cinema\cinema\email\src\main\java\com\cinema\email\domain\EmailContent.java
+C:\Users\Brux\IdeaProjects\cinema\cinema\email\src\main\java\com\cinema\email\services\EmailSenderService.java
+C:\Users\Brux\IdeaProjects\cinema\cinema\email\src\main\java\com\cinema\email\EmailApplication.java
+C:\Users\Brux\IdeaProjects\cinema\cinema\email\src\main\java\com\cinema\email\kafka\OrderConsumer.java
+C:\Users\Brux\IdeaProjects\cinema\cinema\email\src\main\java\com\cinema\email\web\controller\EmailSenderController.java
+C:\Users\Brux\IdeaProjects\cinema\cinema\email\src\main\java\com\cinema\email\services\impl\EmailSenderServiceImpl.java
+C:\Users\Brux\IdeaProjects\cinema\cinema\email\src\main\java\com\cinema\email\resource\EmailMessage.java
+C:\Users\Brux\IdeaProjects\cinema\cinema\email\src\main\java\com\cinema\email\config\KafkaProperties.java
+C:\Users\Brux\IdeaProjects\cinema\cinema\email\src\main\java\com\cinema\email\domain\BaseEntity.java
