@@ -1,5 +1,10 @@
 C:\Users\Brux\IdeaProjects\cinema\cinema\backend-video\src\main\java\com\cinema\backendvideo\model\Comment.java
+C:\Users\Brux\IdeaProjects\cinema\cinema\backend-video\src\main\java\com\cinema\backendvideo\service\VideoService.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\backend-video\src\main\java\com\cinema\backendvideo\model\Video.java
+C:\Users\Brux\IdeaProjects\cinema\cinema\backend-video\src\main\java\com\cinema\backendvideo\service\FileService.java
+C:\Users\Brux\IdeaProjects\cinema\cinema\backend-video\src\main\java\com\cinema\backendvideo\controller\VideoController.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\backend-video\src\main\java\com\cinema\backendvideo\BackendVideoApplication.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\backend-video\src\main\java\com\cinema\backendvideo\model\BaseEntity.java
 C:\Users\Brux\IdeaProjects\cinema\cinema\backend-video\src\main\java\com\cinema\backendvideo\model\VideoStatus.java
+C:\Users\Brux\IdeaProjects\cinema\cinema\backend-video\src\main\java\com\cinema\backendvideo\service\S3Service.java
+C:\Users\Brux\IdeaProjects\cinema\cinema\backend-video\src\main\java\com\cinema\backendvideo\model\User.java
