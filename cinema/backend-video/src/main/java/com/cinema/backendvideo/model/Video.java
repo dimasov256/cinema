@@ -2,7 +2,6 @@ package com.cinema.backendvideo.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.sql.Timestamp;
@@ -14,7 +13,7 @@ import java.util.Set;
 @NoArgsConstructor
 public class Video extends BaseEntity{
 
-    public Video(Long id,
+    public Video(String id,
                  Timestamp lastUpdate,
                  String title,
                  String description,

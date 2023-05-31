@@ -1,10 +1,11 @@
 com\cinema\backendvideo\model\User.class
-com\cinema\backendvideo\model\Comment.class
-com\cinema\backendvideo\BackendVideoApplication.class
 com\cinema\backendvideo\model\Video.class
-com\cinema\backendvideo\service\VideoService.class
 com\cinema\backendvideo\controller\VideoController.class
-com\cinema\backendvideo\model\BaseEntity.class
 com\cinema\backendvideo\service\FileService.class
 com\cinema\backendvideo\model\VideoStatus.class
+com\cinema\backendvideo\model\Comment.class
+com\cinema\backendvideo\BackendVideoApplication.class
+com\cinema\backendvideo\dto\VideoDto.class
+com\cinema\backendvideo\service\VideoService.class
+com\cinema\backendvideo\model\BaseEntity.class
 com\cinema\backendvideo\service\S3Service.class

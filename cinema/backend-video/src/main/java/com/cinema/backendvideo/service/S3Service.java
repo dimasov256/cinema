@@ -21,7 +21,7 @@ public class S3Service implements FileService {
     private final AmazonS3Client amazonS3Client;
 
     @Override
-    public String uploadFIle(MultipartFile file) {
+    public String uploadFile(MultipartFile file) {
         //upload to AWS S3
 
         //prepare the key
@@ -34,7 +34,7 @@ public class S3Service implements FileService {
             amazonS3Client.putObject(BUCKET_NAME, key, file.getInputStream(), metadata);
         } catch (IOException e) {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR,
-                    "An exception occured while uploading file");
+                    "An exception occurred while uploading file");
         }
 
         amazonS3Client.setObjectAcl(BUCKET_NAME, key, CannedAccessControlList.PublicRead);

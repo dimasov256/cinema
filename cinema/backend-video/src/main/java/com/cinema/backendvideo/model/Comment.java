@@ -12,7 +12,7 @@ import java.sql.Timestamp;
 @Document(value = "Comment")
 public class Comment extends BaseEntity{
 
-    public Comment(Long id,
+    public Comment(String id,
                    Timestamp lastUpdate,
                    String text,
                    String authorId,

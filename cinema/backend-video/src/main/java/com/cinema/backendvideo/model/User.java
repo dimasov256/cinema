@@ -13,7 +13,7 @@ import java.util.Set;
 @NoArgsConstructor
 public class User extends BaseEntity{
 
-    public User(Long id,
+    public User(String id,
                 Timestamp lastUpdate,
                 String firstName,
                 String lastName,
