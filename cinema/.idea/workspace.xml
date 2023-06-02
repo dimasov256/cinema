@@ -5,23 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e7df05e-0ec2-4828-bcb6-d6de4f6a65fd" name="Changes" comment="Added all">
-      <change afterPath="$PROJECT_DIR$/backend-video/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend-video/src/main/java/com/cinema/backendvideo/BackendVideoApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend-video/src/main/java/com/cinema/backendvideo/model/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend-video/src/main/java/com/cinema/backendvideo/model/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend-video/src/main/java/com/cinema/backendvideo/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend-video/src/main/java/com/cinema/backendvideo/model/Video.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend-video/src/main/java/com/cinema/backendvideo/model/VideoStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend-video/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amqp/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/amqp/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/clients/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend-video/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend-video/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend-video/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend-video/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/target/customer-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/customer/target/customer-1.0-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/target/generated-sources/annotations/com/cinema/customer/web/mappers/CinemaHallMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/target/generated-sources/annotations/com/cinema/customer/web/mappers/CinemaHallMapperImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/target/generated-sources/annotations/com/cinema/customer/web/mappers/CinemaHallMapperImpl_.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/target/generated-sources/annotations/com/cinema/customer/web/mappers/CinemaHallMapperImpl_.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/target/generated-sources/annotations/com/cinema/customer/web/mappers/CityMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/target/generated-sources/annotations/com/cinema/customer/web/mappers/CityMapperImpl.java" afterDir="false" />
@@ -32,19 +21,6 @@
       <change beforePath="$PROJECT_DIR$/customer/target/generated-sources/annotations/com/cinema/customer/web/mappers/LayoutCapacityMapperImpl_.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/target/generated-sources/annotations/com/cinema/customer/web/mappers/LayoutCapacityMapperImpl_.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/target/generated-sources/annotations/com/cinema/customer/web/mappers/UserMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/target/generated-sources/annotations/com/cinema/customer/web/mappers/UserMapperImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/target/generated-sources/annotations/com/cinema/customer/web/mappers/UserMapperImpl_.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/target/generated-sources/annotations/com/cinema/customer/web/mappers/UserMapperImpl_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/customer/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/front/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderservice/target/generated-sources/annotations/com/cinema/order/web/mappers/OrderEventMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderservice/target/generated-sources/annotations/com/cinema/order/web/mappers/OrderEventMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderservice/target/generated-sources/annotations/com/cinema/order/web/mappers/OrderEventMapperImpl_.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderservice/target/generated-sources/annotations/com/cinema/order/web/mappers/OrderEventMapperImpl_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderservice/target/generated-sources/annotations/com/cinema/order/web/mappers/OrderMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderservice/target/generated-sources/annotations/com/cinema/order/web/mappers/OrderMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderservice/target/generated-sources/annotations/com/cinema/order/web/mappers/OrderMapperImpl_.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderservice/target/generated-sources/annotations/com/cinema/order/web/mappers/OrderMapperImpl_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderservice/target/generated-sources/annotations/com/cinema/order/web/mappers/OrderProductMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderservice/target/generated-sources/annotations/com/cinema/order/web/mappers/OrderProductMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderservice/target/generated-sources/annotations/com/cinema/order/web/mappers/OrderProductMapperImpl_.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderservice/target/generated-sources/annotations/com/cinema/order/web/mappers/OrderProductMapperImpl_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment/target/generated-sources/annotations/com/cinema/payment/web/mappers/EmployeeMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment/target/generated-sources/annotations/com/cinema/payment/web/mappers/EmployeeMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment/target/generated-sources/annotations/com/cinema/payment/web/mappers/EmployeeMapperImpl_.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment/target/generated-sources/annotations/com/cinema/payment/web/mappers/EmployeeMapperImpl_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment/target/generated-sources/annotations/com/cinema/payment/web/mappers/ServiceDataMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment/target/generated-sources/annotations/com/cinema/payment/web/mappers/ServiceDataMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment/target/generated-sources/annotations/com/cinema/payment/web/mappers/ServiceDataMapperImpl_.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment/target/generated-sources/annotations/com/cinema/payment/web/mappers/ServiceDataMapperImpl_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +127,7 @@
       <command value="mvn clean package" />
     </option>
   </component>
-  <component name="RunManager" selected="Docker.resources/Dockerfile">
+  <component name="RunManager" selected="Application.BackendVideoApplication">
     <configuration name="BackendVideoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cinema.backendvideo.BackendVideoApplication" />
       <module name="backend-video" />
@@ -236,9 +212,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.resources/Dockerfile" />
         <item itemvalue="Application.BackendVideoApplication" />
         <item itemvalue="Application.CustomerApplication" />
+        <item itemvalue="Docker.resources/Dockerfile" />
         <item itemvalue="Application.OrderApplication" />
         <item itemvalue="Application.com.cinema.email.EmailApplication" />
       </list>
