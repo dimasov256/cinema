@@ -11,6 +11,7 @@
       <set>
         <option value="$PROJECT_DIR$/cinema-service/pom.xml" />
         <option value="$PROJECT_DIR$/foo/pom.xml" />
+        <option value="$PROJECT_DIR$/front-end/pom.xml" />
         <option value="$PROJECT_DIR$/order/pom.xml" />
         <option value="$PROJECT_DIR$/some/pom.xml" />
       </set>

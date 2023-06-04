@@ -23,6 +23,7 @@
         <module name="eureka-server" />
         <module name="notification" />
         <module name="base-domains" />
+        <module name="experimental-front" />
         <module name="fraud" />
         <module name="payment" />
         <module name="front" />
@@ -35,6 +36,7 @@
     <bytecodeTargetLevel>
       <module name="cinema-service" target="17" />
       <module name="foo" target="17" />
+      <module name="front-end" target="17" />
       <module name="order" target="17" />
       <module name="some" target="17" />
     </bytecodeTargetLevel>
@@ -45,15 +47,17 @@
       <module name="apigw" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="backend-video" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="base-domains" options="-Amapstruct.defaultComponentModel=spring" />
-      <module name="cinema" options="-Amapstruct.defaultComponentModel=spring" />
+      <module name="cinema" options="" />
       <module name="cinema-service" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="clients" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="customer" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="email" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="eureka-server" options="-Amapstruct.defaultComponentModel=spring" />
+      <module name="experimental-front" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="foo" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="fraud" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="front" options="-Amapstruct.defaultComponentModel=spring" />
+      <module name="front-end" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="notification" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="order" options="-Amapstruct.defaultComponentModel=spring" />
       <module name="orderservice" options="-Amapstruct.defaultComponentModel=spring" />

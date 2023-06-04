@@ -23,6 +23,7 @@
         <module>email</module>
         <module>front</module>
         <module>backend-video</module>
+        <module>experimental-front</module>
     </modules>
 
     <name>cinema</name>
