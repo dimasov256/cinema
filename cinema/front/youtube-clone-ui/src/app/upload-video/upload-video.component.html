@@ -1,1 +1,47 @@
-<p>upload-video works!</p>
+<!--<div class="upload-video-container" fxLayout="row wrap" fxLayoutAlign="center">-->
+<!--  <ngx-file-drop dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)">-->
+<!--    <ng-template class="upload-video-template" ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">-->
+<!--      <div>Drag and Drop Videos in this section (or) .</div>-->
+<!--      <div>-->
+<!--        <button mat-button color="primary" (click)="openFileSelector()">Browse Files</button>-->
+<!--      </div>-->
+<!--    </ng-template>-->
+<!--  </ngx-file-drop>-->
+<!--</div>-->
+<!--<div fxLayout="row wrap" fxLayoutAlign="center" class="uploaded-video-section" *ngFor="let item of files; let i=index">-->
+<!--  <div><strong>{{ item.relativePath }}</strong></div>-->
+<!--</div>-->
+<!--<div fxLayout="row wrap" fxLayoutAlign="center">-->
+<!--  <div class="continue" *ngIf="this.fileUploaded">-->
+<!--    <button (click)="uploadVideo()" mat-button color="primary">Upload</button>-->
+<!--  </div>-->
+<!--</div>å-->
+
+
+<div class="center">
+  <ngx-file-drop dropZoneLabel="Drop file here" (onFileDrop)="dropped($event)"
+                 (onFileOver)="fileOver($event)"
+                 (onFileLeave)="fileLeave()">
+    <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+      Drag and drop video
+    <button type="button" (click)="openFileSelector()">Browse files</button>
+    </ng-template>
+  </ngx-file-drop>
+  <div class="update-table">
+      <table class="table">
+      <thead>
+      <tr>
+        <th>
+          Name
+        </th>
+      </tr>
+      </thead>
+        <tbody>
+        <tr *ngFor="let item of files; let i=index">
+        <td><strong>{{item.relativePath}}</strong></td>
+        </tr>
+        </tbody>
+      </table>
+  </div>
+  <button mat-button *ngIf="fileUploaded" (click)="uploadVideo()">Upload video</button>
+</div>

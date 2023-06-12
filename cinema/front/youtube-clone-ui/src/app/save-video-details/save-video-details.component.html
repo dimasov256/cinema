@@ -2,7 +2,7 @@
   <div fxFlex="20%"></div>
   <div fxFlex="30%">
     <div class="mat-title">Add Video Metadata</div>
-    <form  >
+    <form [formGroup]="saveVideoDetails">
       <div>
         <mat-form-field appearance="fill">
           <mat-label>Title</mat-label>
@@ -47,23 +47,23 @@
                    aria-describedby="inputGroupFileAddon01" (change)="onFileSelected($event)">
           </div>
           <br/>
-<!--          <div *ngIf="fileUploaded">-->
-<!--            <p>Selected File: {{selectedFileName}}</p>-->
-<!--          </div>-->
-          <hr>
-<!--          <button mat-raised-button color="primary" type="submit" (click)="onUpload()">Upload</button>-->
+          <div *ngIf="fileUploaded">
+            <p>Selected File: {{selectedFileName}}</p>
+          </div>
+
+          <button mat-raised-button color="primary" type="submit" (click)="onUpload()">Upload</button>
         </label>
       </div>
-      <hr>
+      <h1></h1>
       <button type="submit" mat-raised-button color="primary" (click)="saveVideo()">Save</button>
     </form>
   </div>
   <div fxFlex="30%">
-<!--    <app-video-player *ngIf="videoUrlAvailable" [videoUrl]="videoUrl"></app-video-player>-->
-<!--    <div *ngIf="showVideoUrl">-->
-<!--      <h1>You can now view the video at - </h1>-->
-<!--      <a href="">http://localhost:4200/video/{{videoId}}</a>-->
-<!--    </div>-->
+    <app-video-player [videoUrl]="videoUrl"></app-video-player>
+    <div>
+      <h1>You can now view the video at - </h1>
+      <a href="">http://localhost:4200/video/{{videoId}}</a>
+    </div>
   </div>
   <div fxFlex="20%"></div>
 </div>
